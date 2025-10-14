@@ -17,9 +17,9 @@ export default function Home() {
         <HeroCarousel />
         <AboutSection />
         <ServicesSection/>
-        <TestimonialsSection/>
         {/* <ExpertiseSection /> */}
         <ProjectsSection />
+        <TestimonialsSection/>
         <ContactSection />
       </main>
       <Footer />

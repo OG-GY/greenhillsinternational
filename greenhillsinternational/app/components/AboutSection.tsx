@@ -9,7 +9,7 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="mb-6">
-              <span className="text-accent text-sm font-semibold tracking-widest uppercase">Since 1995</span>
+              <span className="text-accent text-sm font-semibold tracking-widest uppercase">Since 2016</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-serif font-light mb-6 text-foreground">
               A Passion for Quality, Innovation and Excellence

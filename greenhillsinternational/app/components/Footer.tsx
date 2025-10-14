@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-serif font-bold mb-4">
-              PREMIER
-              <span className="block text-sm font-light tracking-widest mt-1">CONSTRUCTION</span>
+              Green Hills 
+              <span className="block text-sm font-light tracking-widest mt-1">International</span>
             </h3>
             <p className="text-primary-foreground/70 mb-4 max-w-md">
-              Building excellence since 1995. We deliver world-class construction projects with innovative design and superior craftsmanship.
+              Building excellence since 2016. We deliver world-class construction projects with innovative design and superior craftsmanship.
             </p>
             <div className="flex space-x-4">
               <a
@@ -87,7 +87,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} Premier Construction. All rights reserved.
+              © {currentYear} Green Hills International Construction. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">

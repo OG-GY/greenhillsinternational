@@ -51,15 +51,15 @@ const HeroCarousel = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0  transition-opacity duration-1000 ${
             index === currentSlide ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0  bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image.src})` }}
           />
-          <div className="absolute inset-0 hero-gradient" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
           
           <div className="relative h-full flex items-center justify-center">
             <div className="container mx-auto px-4">
