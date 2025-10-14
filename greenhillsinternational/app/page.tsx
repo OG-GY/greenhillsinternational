@@ -6,6 +6,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import ServicesSection from "./components/ServicesSection";
+import TestimonialsSection from "./components/TestimonialSection";
 
 export default function Home() {
   return (
@@ -14,7 +16,9 @@ export default function Home() {
       <main>
         <HeroCarousel />
         <AboutSection />
-        <ExpertiseSection />
+        <ServicesSection/>
+        <TestimonialsSection/>
+        {/* <ExpertiseSection /> */}
         <ProjectsSection />
         <ContactSection />
       </main>

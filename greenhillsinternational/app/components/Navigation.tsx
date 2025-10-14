@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="text-primary-foreground font-serif text-2xl font-bold tracking-wider">
-            PREMIER
+            Green Hills International
             <span className="block text-sm font-light tracking-widest">CONSTRUCTION</span>
           </a>
 

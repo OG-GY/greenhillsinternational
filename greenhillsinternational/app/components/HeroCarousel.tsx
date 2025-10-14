@@ -57,7 +57,7 @@ const HeroCarousel = () => {
         >
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ backgroundImage: `url(${slide.image.src})` }}
           />
           <div className="absolute inset-0 hero-gradient" />
           

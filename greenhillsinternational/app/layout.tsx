@@ -5,9 +5,8 @@ import Navigation from "./components/Navigation"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Green Hills International",
+  description: "Green Hills",
 }
 
 export default function RootLayout({
