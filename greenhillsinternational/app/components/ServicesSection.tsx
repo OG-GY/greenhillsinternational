@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { servicesData } from '../lib/servicedata';
 
 
+type ServiceIconMap = Record<string, React.ComponentType<{ className?: string }>>;
+
 const services = servicesData.map((s) => {
-  const iconMap: Record<string, any> = {
+  const iconMap: ServiceIconMap = {
     construction: Building2,
     design: Hammer,
     structural: Layers,

@@ -116,7 +116,7 @@ const TestimonialsSection = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We&apot;re proud to have collaborated with some of the most prestigious companies in the UAE construction and development sector.
+            We&amp;apos;re proud to have collaborated with some of the most prestigious companies in the UAE construction and development sector.
           </p>
         </div>
 
@@ -187,7 +187,7 @@ const TestimonialsSection = () => {
                     <div className="p-6 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                       <Quote className="w-8 h-8 text-primary mb-4" />
                       <p className="text-muted-foreground mb-6 flex-grow italic">
-                        "{testimonial.message}"
+                        &quot;{testimonial.message}&quot;
                       </p>
                       <div className="flex items-center gap-4 mt-auto">
                         <Image

@@ -11,10 +11,10 @@ const ContactSection = () => {
           <div>
             <span className="text-accent text-sm font-semibold tracking-widest uppercase">Get In Touch</span>
             <h2 className="text-4xl md:text-5xl font-serif font-light mt-4 mb-6">
-              Let's Build Something Extraordinary
+              Let&amp;apos;s Build Something Extraordinary
             </h2>
             <p className="text-primary-foreground/80 mb-8 leading-relaxed">
-              Whether you're planning a residential project, commercial development, or infrastructure initiative, our team is ready to bring your vision to life.
+              Whether you&amp;apos;re planning a residential project, commercial development, or infrastructure initiative, our team is ready to bring your vision to life.
             </p>
 
             <div className="space-y-6">

@@ -41,10 +41,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         day_hidden: "invisible",
         ...classNames,
       }}
-      components={{
-        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />,
-      }}
+      // Using default DayPicker navigation icons to satisfy current type definitions
       {...props}
     />
   );

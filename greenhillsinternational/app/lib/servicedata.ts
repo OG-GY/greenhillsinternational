@@ -22,7 +22,7 @@ import waterproofing from '../assets/services/waterproofing.jpg';
 export type ServiceSection = {
   title: string;
   description: string;
-  imageSrc: any;
+  imageSrc: typeof architecturalDesign;
   imageAlt: string;
 };
 

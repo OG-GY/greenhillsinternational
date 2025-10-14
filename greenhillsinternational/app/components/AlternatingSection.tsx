@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 interface AlternatingSectionProps {
   title: string;
   description: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   imageAlt: string;
   reverse?: boolean;
 }
