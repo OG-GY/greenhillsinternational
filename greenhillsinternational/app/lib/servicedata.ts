@@ -34,12 +34,13 @@ export type ServiceData = {
   sections: ServiceSection[];
 };
 
+
 export const servicesData: ServiceData[] = [
   {
     slug: 'construction',
     title: 'Construction & Turnkey Projects',
     subtitle: 'Turnkey Solutions',
-    summary: 'End-to-end construction for villas, commercial buildings, and industrial facilities.',
+    summary: 'End-to-end G+1 construction for villas, commercial buildings, and industrial facilities.',
     sections: [
       {
         title: 'Luxury Villas & Residences',
@@ -65,7 +66,7 @@ export const servicesData: ServiceData[] = [
       {
         title: 'Extensions & Renovations',
         description:
-          'From structural upgrades to complete refurbishments, we enhance spaces with modern design and sustainable construction practices. We specialize in G+1 extensions and heritage preservation, seamlessly integrating contemporary elements with existing structures.',
+          'From structural upgrades to complete refurbishments, we enhance spaces with modern design and sustainable construction practices. We specialize in extensions and heritage preservation, seamlessly integrating contemporary elements with existing structures.',
         imageSrc: renovation,
         imageAlt: 'Building renovation in progress',
       },

@@ -14,7 +14,8 @@ const ServiceDetailLayout = ({ children, title, subtitle }: ServiceDetailLayoutP
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation />
+      {/* Force the navbar to always show the blue background on service detail pages */}
+      <Navigation changeOnScroll={false} />
       
       <main className="flex-1">
         {/* Hero Section */}

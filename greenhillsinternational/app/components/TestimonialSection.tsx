@@ -3,54 +3,92 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Quote } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import client1 from '../assets/hero-3.jpg';
-import client2 from '../assets/clients/client-2.jpg';
-import client3 from '../assets/clients/client-3.jpg';
-import client4 from '../assets/clients/client-4.jpg';
-import client5 from '../assets/clients/client-5.jpg';
-import client6 from '../assets/clients/client-6.jpg';
+import client2 from '../assets/clients/Binghatti.jpg';
+import client3 from '../assets/clients/CircleMall.jpg';
+import client4 from '../assets/clients/CityCentre.jpg';
+import client5 from '../assets/clients/Damac.jpg';
+import client6 from '../assets/clients/DubaiMall.jpg';
+import client7 from '../assets/clients/Emaar.jpg';
+import client8 from '../assets/clients/MAG.jpg';
+import client9 from '../assets/clients/MAG2.jpg';
+import client10 from '../assets/clients/RIT.jpg';
+import client11 from '../assets/clients/RTA.jpg';
+import client12 from '../assets/clients/Sheikh.jpg';
+import client13 from '../assets/clients/TheAddress.jpg';
+import client14 from '../assets/clients/TheVilla.jpg';
+import client15 from '../assets/clients/VillaPalm.jpg';
 import user1 from '../assets/testimonials/user-1.jpg';
 import user2 from '../assets/testimonials/user-2.jpg';
 import user3 from '../assets/testimonials/user-3.jpg';
 import user4 from '../assets/testimonials/user-4.jpg';
 import user5 from '../assets/testimonials/user-5.jpg';
 import user6 from '../assets/testimonials/user-6.jpg';
+import user7 from '../assets/testimonials/user7.jpeg';
+import user8 from '../assets/testimonials/user8.jpeg';
 import Image from 'next/image';
 
-const clients = [
-  {
-    name: 'Premier Construction Group',
-    subtitle: 'Leading Construction & Development Partner',
-    logo: client1,
-  },
-  {
-    name: 'Real Estate Holdings',
-    subtitle: 'Luxury Property Development',
-    logo: client2,
-  },
-  {
-    name: 'Industrial Engineering Solutions',
-    subtitle: 'Advanced Manufacturing & Engineering',
-    logo: client3,
-  },
-  {
-    name: 'Architecture & Design Studio',
-    subtitle: 'Contemporary Design Excellence',
-    logo: client4,
-  },
-  {
-    name: 'Smart Technology Partners',
-    subtitle: 'Innovative Building Solutions',
-    logo: client5,
-  },
-  {
-    name: 'Hospitality Group International',
-    subtitle: 'Premium Hotel & Resort Development',
-    logo: client6,
-  },
+// Build clients list from imported image names. This uses the imported image object's
+// `src` (when available) to derive a readable company name (e.g. "client-2" -> "Client 2").
+function humanizeFilename(src?: string) {
+  if (!src) return "Client";
+  const parts = src.split("/");
+  const file = parts[parts.length - 1] || src;
+  const base = file.split(".")[0];
+  return base
+    .replace(/[_-]+/g, " ")
+    .split(" ")
+    .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
+}
+
+const clientLogos = [
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+  client7,
+  client8,
+  client9,
+  client10,
+  client11,
+  client12,
+  client13,
+  client14,
+  client15,
 ];
+
+function getImageSrc(img: unknown): string | undefined {
+  if (!img) return undefined;
+  if (typeof img === "string") return img;
+  if (typeof img === "object" && img !== null && "src" in img) {
+    const asObj = img as { src?: string };
+    return asObj.src;
+  }
+  return undefined;
+}
+
+const clients = clientLogos.map((logo) => ({
+  name: humanizeFilename(getImageSrc(logo)),
+  subtitle: "Our Trusted Partner",
+  logo,
+}));
 
 const testimonials = [
   {
+    name: 'Sheikh Mohammed bin hammad bin tahnoon al nahyan​​',
+    role: 'CEO, Premier Construction Group',
+    message: 'GKBC delivered exceptional quality on our home renovation. Their work was timely, professional, and within budget.​',
+    image: user8,
+  },
+    {
+    name: 'Sheikh Khalifa bin Tahnoon bin mohammed al nahyan​​',
+    role: 'CEO, Premier Construction Group',
+    message: 'We hired them for a commercial project and were impressed by their clear communication and attention to detail. A reliable team that truly stands by their promises!',
+    image: user7,
+  },
+    {
     name: 'Ahmed Al-Mansouri',
     role: 'CEO, Premier Construction Group',
     message: 'Green Hills exceeded our expectations with their exceptional attention to detail and commitment to quality. Their team delivered our commercial project on time and within budget.',
@@ -85,6 +123,12 @@ const testimonials = [
     role: 'CEO, Hospitality Group',
     message: 'Green Hills transformed our vision into reality with their impeccable execution. Their team\'s dedication to excellence and client satisfaction is truly impressive.',
     image: user6,
+  },
+    {
+    name: 'Khalil Ahmad',
+    role: 'Property Developer',
+    message: 'I have worked with many contractors over the years, but Green Hills stands out for their transparency, communication, and ability to deliver exceptional results consistently.',
+    image: user5,
   },
 ];
 

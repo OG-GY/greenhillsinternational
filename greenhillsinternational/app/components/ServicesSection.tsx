@@ -28,7 +28,7 @@ const services = servicesData.map((s) => {
     icon: iconMap[s.slug] ?? Building2,
     title: s.title,
     summary: s.summary,
-    path: `/services/${s.slug}`
+    path: `/construction/services/${s.slug}`
   };
 });
 

@@ -5,17 +5,33 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 
-const Navigation = () => {
+interface NavigationProps {
+  /**
+   * If true (default) the navbar will switch from transparent -> blue when the page is scrolled.
+   * If false, the navbar will always have the blue background.
+   */
+  changeOnScroll?: boolean;
+}
+
+const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Only attach the scroll listener when changeOnScroll is true. If changeOnScroll is false
+  // we want the navbar to always show the blue background and there's no need for a listener.
   useEffect(() => {
+    if (!changeOnScroll) return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
+    // run once to set initial state
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [changeOnScroll]);
 
   const navItems = [
     { label: 'ABOUT', href: '#about' },
@@ -25,10 +41,14 @@ const Navigation = () => {
     { label: 'CONTACT', href: '#contact' },
   ];
 
+  // showBlue should be true when the navbar must display the solid blue background.
+  // If changeOnScroll is false we always show blue; otherwise only when scrolled.
+  const showBlue = !changeOnScroll || isScrolled;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        showBlue ? 'bg-primary/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">

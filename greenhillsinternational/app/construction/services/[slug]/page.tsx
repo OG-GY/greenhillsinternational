@@ -1,6 +1,6 @@
-import ServiceDetailLayout from '../../components/ServiceDetailLayout';
-import AlternatingSection from '../../components/AlternatingSection';
-import { getAllServiceSlugs, getServiceBySlug } from '../../lib/servicedata';
+import ServiceDetailLayout from '../../../components/ServiceDetailLayout';
+import AlternatingSection from '../../../components/AlternatingSection';
+import { getAllServiceSlugs, getServiceBySlug } from '../../../lib/servicedata';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
