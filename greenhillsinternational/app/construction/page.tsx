@@ -12,7 +12,7 @@ import BookAppointment from "../components/BookAppointment"
 
 export default function Construction() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navigation />
       <main>
         <HeroCarousel />
