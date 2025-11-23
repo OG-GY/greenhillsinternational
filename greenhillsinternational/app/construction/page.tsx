@@ -12,9 +12,9 @@ import BookAppointment from "../components/BookAppointment"
 
 export default function Construction() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Navigation />
-      <main>
+      <main className="overflow-x-hidden">
         <HeroCarousel />
         <AboutSection />
         <ServicesSection />

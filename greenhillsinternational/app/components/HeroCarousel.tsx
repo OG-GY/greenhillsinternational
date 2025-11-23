@@ -67,10 +67,10 @@ const HeroCarousel = () => {
           <div className="relative h-full flex items-center justify-center">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-primary-foreground mb-4 animate-fade-in ml-16">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-light text-primary-foreground mb-4 animate-fade-in md:ml-16">
                   {slide.title}
                 </h1>
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-primary-foreground animate-fade-in ml-16">
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-primary-foreground animate-fade-in md:ml-16">
                   {slide.subtitle}
                 </h2>
               </div>
