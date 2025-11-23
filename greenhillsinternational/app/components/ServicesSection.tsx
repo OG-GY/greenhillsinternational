@@ -4,10 +4,29 @@ import { Button } from '../components/ui/button';
 import Link from 'next/link';
 import { servicesData } from '../lib/servicedata';
 
-
 type ServiceIconMap = Record<string, React.ComponentType<{ className?: string }>>;
 
-const services = servicesData.map((s) => {
+export type ServiceItem = {
+  icon?: React.ComponentType<{ className?: string }>;
+  iconName?: string;
+  title: string;
+  summary: string;
+  path?: string;
+};
+
+type Props = {
+  list?: ServiceItem[];
+  /**
+   * Optional heading overrides
+   */
+  heading?: {
+    eyebrow?: string;
+    title?: string;
+    subtitle?: string;
+  };
+};
+
+const buildDefaultList = (): ServiceItem[] => {
   const iconMap: ServiceIconMap = {
     construction: Building2,
     design: Hammer,
@@ -24,32 +43,53 @@ const services = servicesData.map((s) => {
     smart: Lightbulb,
     'value-added': HeartHandshake,
   };
-  return {
+
+  return servicesData.map((s) => ({
     icon: iconMap[s.slug] ?? Building2,
     title: s.title,
     summary: s.summary,
-    path: `/construction/services/${s.slug}`
-  };
-});
+    path: `/construction/services/${s.slug}`,
+  }));
+};
 
-const ServicesSection = () => {
+const ServicesSection = ({ list, heading }: Props) => {
+  const items = list ?? buildDefaultList();
 
   return (
     <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-accent text-sm font-semibold tracking-widest uppercase">Our Expertise</span>
+          <span className="text-accent text-sm font-semibold tracking-widest uppercase">{heading?.eyebrow ?? 'Our Expertise'}</span>
           <h2 className="text-4xl md:text-5xl font-serif font-light mt-4 mb-6 text-foreground">
-            Comprehensive Construction Services
+            {heading?.title ?? 'Comprehensive Construction Services'}
           </h2>
           <p className="text-muted-foreground text-lg">
-            From concept to completion, we deliver excellence across all aspects of construction and building services.
+            {heading?.subtitle ?? 'From concept to completion, we deliver excellence across all aspects of construction and building services.'}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
+          {items.map((service, index) => {
+            let Icon: React.ComponentType<{ className?: string }>;
+            
+            if (service.icon) {
+              Icon = service.icon;
+            } else if (service.iconName) {
+              // Map iconName string to component
+              const iconNameMap: ServiceIconMap = {
+                'Package': Package,
+                'Zap': Zap,
+                'Building2': Building2,
+                'Mountain': Building2, // Placeholder
+                'Container': Package,
+                'Cable': Wrench,
+                'Drum': Package,
+              };
+              Icon = iconNameMap[service.iconName as keyof typeof iconNameMap] ?? Building2;
+            } else {
+              Icon = Building2;
+            }
+            
             return (
               <Card 
                 key={index} 
@@ -70,7 +110,7 @@ const ServicesSection = () => {
                     variant="outline" 
                     className="w-full group-hover:border-accent group-hover:text-accent cursor-pointer"
                   >
-                    <Link href={service.path}>Learn More</Link>
+                    <Link href={service.path ?? '#'}>Learn More</Link>
                   </Button>
                 </CardContent>
               </Card>
