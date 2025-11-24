@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2025;
 
   return (
     <footer className="bg-primary/95 text-primary-foreground">
@@ -51,22 +51,22 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <a href="/" className="text-primary-foreground/70 hover:text-accent transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#expertise" className="text-primary-foreground/70 hover:text-accent transition-colors">
-                  Our Expertise
+                <a href="/construction#services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Construction Services
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-primary-foreground/70 hover:text-accent transition-colors">
-                  Projects
+                <a href="/metal#services" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Metal Services
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                <a href="/contact" className="text-primary-foreground/70 hover:text-accent transition-colors">
                   Contact
                 </a>
               </li>
@@ -90,10 +90,10 @@ const Footer = () => {
               © {currentYear} Green Hills International Construction. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="/" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="/" className="text-primary-foreground/60 hover:text-accent transition-colors">
                 Terms of Service
               </a>
             </div>
