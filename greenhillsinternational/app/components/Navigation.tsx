@@ -34,11 +34,12 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
   }, [changeOnScroll]);
 
   const navItems = [
-    { label: 'ABOUT', href: '#about' },
-    { label: 'PORTFOLIO', href: '#portfolio' },
-    { label: 'EXPERTISE', href: '#expertise' },
-    { label: 'PROJECTS', href: '#projects' },
-    { label: 'CONTACT', href: '#contact' },
+    { label: 'About Us', href: '/' },
+    { label: 'Construction', href: '/construction' },
+    { label: 'Construction Services', href: '/construction#services' },
+    { label: 'Metals', href: '/metal' },
+    { label: 'Metals Services', href: '/metal#services' },
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   // showBlue should be true when the navbar must display the solid blue background.
@@ -54,7 +55,7 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="text-primary-foreground font-serif text-2xl font-bold tracking-wider">
+          <a href="/" className="text-primary-foreground font-serif text-2xl font-bold tracking-wider">
             Green Hills International
             <span className="block text-sm font-light tracking-widest">CONSTRUCTION</span>
           </a>
