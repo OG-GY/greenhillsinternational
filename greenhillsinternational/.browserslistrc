@@ -1,0 +1,19 @@
+# Browserslist for modern browser targeting
+# This prevents legacy JavaScript (ES5) fallback generation
+# Saves ~11KB in bundle size
+
+# Target only modern browsers with ES2017+ support
+last 2 major versions
+node 18
+not dead
+not ie 11
+not safari < 14
+not ios_saf < 14
+not chrome < 90
+not firefox < 88
+not edge < 90
+
+# Modern browser targeting ensures:
+# - No ES5 transpilation needed
+# - No polyfills for modern APIs
+# - Better performance and smaller bundle
