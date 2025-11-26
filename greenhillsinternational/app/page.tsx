@@ -1,4 +1,3 @@
-import Link from "next/link";
 import LandingSection from "./components/LandingSection";
 
 export default function Home() {

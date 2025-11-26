@@ -19,7 +19,7 @@ const ServicePage = async ({ params }: PageProps) => {
   }
 
   return (
-    <ServiceDetailLayout title={service.title} subtitle={service.subtitle}>
+    <ServiceDetailLayout title={service.title}>
       {service.sections.map((section, index) => (
         <AlternatingSection
           key={index}

@@ -1,5 +1,4 @@
 import ServiceDetailLayout from '../../../components/ServiceDetailLayout';
-import AlternatingSection from '../../../components/AlternatingSection';
 import { getAllMetalDomainSlugs, getMetalDomainBySlug } from '@/app/lib/metalservicedata';
 
 type PageProps = {
@@ -19,7 +18,7 @@ const ServicePage = async ({ params }: PageProps) => {
   }
 
   return (
-    <ServiceDetailLayout title={service.title} subtitle={service.summary}>
+    <ServiceDetailLayout title={service.title}>
       {/* Render domain details using tab interface instead */}
       <div className="py-12">
         <p className="text-lg text-muted-foreground">{service.description}</p>

@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* Optimization settings for modern browsers */
-  swcMinify: true,
   
   /* Target modern browsers - saves ~11 KB by removing ES5 fallbacks */
   onDemandEntries: {

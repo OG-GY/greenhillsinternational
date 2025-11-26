@@ -1,16 +1,13 @@
 import { ReactNode } from 'react';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import { Button } from './ui/button';
-import { ArrowLeft } from 'lucide-react';
 
 interface ServiceDetailLayoutProps {
   children: ReactNode;
   title: string;
-  subtitle: string;
 }
 
-const ServiceDetailLayout = ({ children, title, subtitle }: ServiceDetailLayoutProps) => {
+const ServiceDetailLayout = ({ children, title }: ServiceDetailLayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col">

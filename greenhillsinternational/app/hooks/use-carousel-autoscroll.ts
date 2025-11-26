@@ -1,7 +1,7 @@
 // Optimized hook for carousel auto-scrolling
 // Uses requestAnimationFrame and Page Visibility API for better performance
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { CarouselApi } from '@/app/components/ui/carousel';
 
 interface UseCarouselAutoScrollProps {

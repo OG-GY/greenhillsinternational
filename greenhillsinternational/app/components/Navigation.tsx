@@ -1,6 +1,6 @@
 "use client";
 
-
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
@@ -55,10 +55,10 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="text-primary-foreground font-serif text-2xl font-bold tracking-wider">
+          <Link href="/" className="text-primary-foreground font-serif text-2xl font-bold tracking-wider">
             Green Hills International
             <span className="block text-sm font-light tracking-widest">CONSTRUCTION</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
