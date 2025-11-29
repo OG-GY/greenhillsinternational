@@ -1,131 +1,116 @@
-import { NextResponse } from "next/server";
+import { MetadataRoute } from 'next';
 
-export async function GET() {
-  const baseUrl = "https://greenhillsinternational.com";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://greenhillsinternational.com';
 
   // All static pages
   const staticRoutes = [
-    { path: "/", changefreq: "weekly", priority: 1.0 },
-    { path: "/construction", changefreq: "weekly", priority: 0.9 },
-    { path: "/metal", changefreq: "weekly", priority: 0.9 },
-    { path: "/contact", changefreq: "monthly", priority: 0.7 },
+    { path: '/', changefreq: 'weekly', priority: 1.0 },
+    { path: '/construction', changefreq: 'weekly', priority: 0.9 },
+    { path: '/metal', changefreq: 'weekly', priority: 0.9 },
+    { path: '/contact', changefreq: 'monthly', priority: 0.7 },
   ];
 
   // Construction Services (14 services)
   const constructionServices = [
-    "construction",
-    "design",
-    "structural",
-    "mep",
-    "interior",
-    "facades",
-    "landscaping",
-    "waterproofing",
-    "modular",
-    "maintenance",
-    "temporary",
-    "specialty",
-    "smart",
-    "value-added",
+    'construction',
+    'design',
+    'structural',
+    'mep',
+    'interior',
+    'facades',
+    'landscaping',
+    'waterproofing',
+    'modular',
+    'maintenance',
+    'temporary',
+    'specialty',
+    'smart',
+    'value-added',
   ];
 
   // Projects (4 projects)
   const projects = [
-    "luxury-tower",
-    "corporate-hq",
-    "premium-penthouse",
-    "mixed-use",
+    'luxury-tower',
+    'corporate-hq',
+    'premium-penthouse',
+    'mixed-use',
   ];
 
   // Metal Domains (7 domains)
   const metalDomains = [
-    "scrap",
-    "non-ferrous",
-    "steel",
-    "ores",
-    "containers",
-    "wires",
-    "packaging",
+    'scrap',
+    'non-ferrous',
+    'steel',
+    'ores',
+    'containers',
+    'wires',
+    'packaging',
   ];
 
   // Metal Services (same as metal domains)
   const metalServices = [
-    "scrap",
-    "non-ferrous",
-    "steel",
-    "ores",
-    "containers",
-    "wires",
-    "packaging",
+    'scrap',
+    'non-ferrous',
+    'steel',
+    'ores',
+    'containers',
+    'wires',
+    'packaging',
   ];
 
-  // Build URL entries
-  let urls = "";
+  // Build all URLs array
+  const urls: MetadataRoute.Sitemap = [];
 
-  // Static pages
+  // Add static pages
   staticRoutes.forEach((route) => {
-    urls += `
-  <url>
-    <loc>${baseUrl}${route.path}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-  </url>`;
+    urls.push({
+      url: `${baseUrl}${route.path}`,
+      lastModified: new Date(),
+      changeFrequency: route.changefreq as 'weekly' | 'monthly',
+      priority: route.priority,
+    });
   });
 
-  // Construction services
+  // Add construction services
   constructionServices.forEach((service) => {
-    urls += `
-  <url>
-    <loc>${baseUrl}/construction/services/${service}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+    urls.push({
+      url: `${baseUrl}/construction/services/${service}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
   });
 
-  // Projects
+  // Add projects
   projects.forEach((project) => {
-    urls += `
-  <url>
-    <loc>${baseUrl}/projects/${project}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+    urls.push({
+      url: `${baseUrl}/projects/${project}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
   });
 
-  // Metal domains
+  // Add metal domains
   metalDomains.forEach((domain) => {
-    urls += `
-  <url>
-    <loc>${baseUrl}/metal/${domain}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+    urls.push({
+      url: `${baseUrl}/metal/${domain}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
   });
 
-  // Metal services
+  // Add metal services
   metalServices.forEach((service) => {
-    urls += `
-  <url>
-    <loc>${baseUrl}/metal/services/${service}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>`;
+    urls.push({
+      url: `${baseUrl}/metal/services/${service}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
   });
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}
-</urlset>`;
-
-  return new NextResponse(xml.trim(), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=0, s-maxage=86400",
-    },
-  });
+  return urls;
 }
