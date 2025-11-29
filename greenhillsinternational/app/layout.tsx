@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Green Hills International" }],
   creator: "Green Hills International",
   publisher: "Green Hills International",
+  metadataBase: new URL("https://greenhillsinternational.com"),
   formatDetection: {
     email: false,
     address: false,
@@ -20,9 +21,37 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_AE",
     url: "https://greenhillsinternational.com",
+    siteName: "Green Hills International",
+    title: "Green Hills International | Construction & Metal Trading UAE",
+    description: "Leading construction and metal trading company in Dubai & UAE. Premium building projects, MEP services, and global metal supply chain solutions. Expert contractors.",
+    images: [
+      {
+        url: "https://greenhillsinternational.com/og/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Green Hills International - Construction & Metal Trading",
+        type: "image/png",
+      },
+      {
+        url: "https://greenhillsinternational.com/og/og-default.png",
+        width: 800,
+        height: 420,
+        alt: "Green Hills International",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@greenhillsintl",
     title: "Green Hills International | Construction & Metal Trading",
     description: "Premium construction and metal trading services in the UAE",
-    siteName: "Green Hills International",
+    images: ["https://greenhillsinternational.com/og/og-default.png"],
+    creator: "@greenhillsintl",
+  },
+  other: {
+    "linkedin:url": "https://www.linkedin.com/company/greenhillsinternational",
+    "facebook:app_id": "YOUR_FACEBOOK_APP_ID",
   },
   robots: {
     index: true,

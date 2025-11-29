@@ -13,11 +13,39 @@ import MetalAboutSection from '../components/MetalAboutSection';
 export const metadata: Metadata = {
   title: 'Metal Trading & Industrial Materials | Green Hills International',
   description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials. Reliable global supply chain solutions for industries.',
-  keywords: ['metal trading', 'scrap trading', 'ferrous metals', 'non-ferrous metals', 'steel products', 'industrial materials', 'Dubai', 'UAE'],
+  keywords: ['Green Hills International','metal trading', 'scrap trading', 'ferrous metals', 'non-ferrous metals', 'steel products', 'industrial materials', 'Dubai', 'UAE'],
   openGraph: {
-    title: 'Metal Trading & Industrial Materials | Green Hills International',
-    description: 'Trusted metal trading partner providing quality ferrous, non-ferrous & recycled materials with efficient global supply chain.',
     type: 'website',
+    url: 'https://greenhillsinternational.com/metal',
+    title: 'Metal Trading & Industrial Materials | Green Hills International',
+    description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials.',
+    siteName: 'Green Hills International',
+    locale: 'en_AE',
+    images: [
+      {
+        url: 'https://greenhillsinternational.com/og/og-metal.png',
+        width: 1200,
+        height: 630,
+        alt: 'Green Hills International - Metal Trading',
+        type: 'image/png',
+      },
+      {
+        url: 'https://greenhillsinternational.com/og/og-metal.png',
+        width: 800,
+        height: 420,
+        alt: 'Metal Trading & Industrial Materials',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Metal Trading & Industrial Materials | Green Hills International',
+    description: 'Premier metal trading company providing ferrous, non-ferrous metals, and scrap materials globally.',
+    images: ['https://greenhillsinternational.com/og/og-metal.png'],
+  },
+  alternates: {
+    canonical: 'https://greenhillsinternational.com/metal',
   },
 };
 
