@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -8,6 +9,17 @@ import { metalDomains } from '../lib/metalservicedata';
 import ServicesSection from '../components/ServicesSection';
 import SustainabilitySection from '../components/SustainabilitySection';
 import MetalAboutSection from '../components/MetalAboutSection';
+
+export const metadata: Metadata = {
+  title: 'Metal Trading & Industrial Materials | Green Hills International',
+  description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials. Reliable global supply chain solutions for industries.',
+  keywords: ['metal trading', 'scrap trading', 'ferrous metals', 'non-ferrous metals', 'steel products', 'industrial materials', 'Dubai', 'UAE'],
+  openGraph: {
+    title: 'Metal Trading & Industrial Materials | Green Hills International',
+    description: 'Trusted metal trading partner providing quality ferrous, non-ferrous & recycled materials with efficient global supply chain.',
+    type: 'website',
+  },
+};
 
 const Metal = () => {
 
