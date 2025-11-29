@@ -14,9 +14,37 @@ export const metadata: Metadata = {
   description: 'Expert construction services in Dubai & UAE. Civil construction, MEP services, infrastructure, facades & more. Award-winning contractor with proven track record.',
   keywords: ['construction services', 'civil construction', 'MEP services', 'infrastructure', 'facades', 'Dubai construction', 'building contractor'],
   openGraph: {
-    title: 'Construction Services | Green Hills International',
-    description: 'Professional construction contractor delivering design, MEP, project management & comprehensive building solutions in Dubai.',
     type: 'website',
+    url: 'https://greenhillsinternational.com/construction',
+    title: 'Construction Services | Green Hills International',
+    description: 'Expert construction services in Dubai & UAE. Civil construction, MEP services, infrastructure, facades & more. Award-winning contractor.',
+    siteName: 'Green Hills International',
+    locale: 'en_AE',
+    images: [
+      {
+        url: 'https://greenhillsinternational.com/og/og-construction.png',
+        width: 1200,
+        height: 630,
+        alt: 'Green Hills International - Construction Services',
+        type: 'image/png',
+      },
+      {
+        url: 'https://greenhillsinternational.com/og/og-construction.png',
+        width: 800,
+        height: 420,
+        alt: 'Construction Services',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Construction Services | Green Hills International',
+    description: 'Expert construction services in Dubai & UAE - MEP, civil construction, and infrastructure solutions.',
+    images: ['https://greenhillsinternational.com/og/og-construction.png'],
+  },
+  alternates: {
+    canonical: 'https://greenhillsinternational.com/construction',
   },
 };
 

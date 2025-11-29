@@ -29,9 +29,37 @@ export async function generateMetadata({
     description: `${domain.title} trading solutions by Green Hills International. Quality materials & reliable global supply chain for industries.`,
     keywords: [domain.title, 'metal trading', 'industrial supplier', 'global trade', 'UAE', 'Dubai'],
     openGraph: {
-      title: `${domain.title} Trading Solutions`,
-      description: `Professional ${domain.title.toLowerCase()} trading with guaranteed quality & competitive pricing.`,
       type: 'website',
+      url: `https://greenhillsinternational.com/metal/${domainSlug}`,
+      title: `${domain.title} Trading Solutions`,
+      description: `${domain.title} trading solutions by Green Hills International. Quality materials & reliable supply chain.`,
+      siteName: 'Green Hills International',
+      locale: 'en_AE',
+      images: [
+        {
+          url: 'https://greenhillsinternational.com/og/og-metal.png',
+          width: 1200,
+          height: 630,
+          alt: `${domain.title} Trading`,
+          type: 'image/png',
+        },
+        {
+          url: 'https://greenhillsinternational.com/og/og-metal.png',
+          width: 800,
+          height: 420,
+          alt: 'Metal Trading',
+          type: 'image/png',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${domain.title} Trading Solutions`,
+      description: `Professional ${domain.title.toLowerCase()} trading with quality materials & reliable supply.`,
+      images: ['https://greenhillsinternational.com/og/og-metal.png'],
+    },
+    alternates: {
+      canonical: `https://greenhillsinternational.com/metal/${domainSlug}`,
     },
   };
 }

@@ -9,9 +9,37 @@ export const metadata: Metadata = {
   description: 'Connect with Green Hills International today. Get quotes & support for construction & metal trading. Call +971 55 334 4874 or email us now.',
   keywords: ['contact', 'inquiry', 'quote', 'construction services', 'metal trading', 'support'],
   openGraph: {
-    title: 'Contact Us | Green Hills International',
-    description: 'Reach our construction & metal trading teams. Get expert support, quotes & partnership opportunities. Contact us now!',
     type: 'website',
+    url: 'https://greenhillsinternational.com/contact',
+    title: 'Contact Us | Green Hills International',
+    description: 'Reach our construction & metal trading teams. Get expert support, quotes & partnership opportunities.',
+    siteName: 'Green Hills International',
+    locale: 'en_AE',
+    images: [
+      {
+        url: 'https://greenhillsinternational.com/og/og-contact.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Green Hills International',
+        type: 'image/png',
+      },
+      {
+        url: 'https://greenhillsinternational.com/og/og-contact.jpg',
+        width: 800,
+        height: 420,
+        alt: 'Contact Us',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | Green Hills International',
+    description: 'Reach our teams. Get expert support, quotes & partnership opportunities.',
+    images: ['https://greenhillsinternational.com/og/og-contact.jpg'],
+  },
+  alternates: {
+    canonical: 'https://greenhillsinternational.com/contact',
   },
 };
 

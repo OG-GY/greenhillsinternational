@@ -33,17 +33,37 @@ export async function generateMetadata({
     description: `${project.title} - Premium ${project.category} project in ${project.location}. Built by Green Hills International with quality craftsmanship & innovation.`,
     keywords: [project.category, project.location, 'project', 'construction', 'contractor', 'Dubai'],
     openGraph: {
-      title: project.title,
-      description: `Explore ${project.title}, a showcase of excellence in ${project.category.toLowerCase()} construction.`,
       type: 'website',
+      url: `https://greenhillsinternational.com/projects/${projectId}`,
+      title: project.title,
+      description: `${project.title} - Premium ${project.category} project in ${project.location}. Built by Green Hills International.`,
+      siteName: 'Green Hills International',
+      locale: 'en_AE',
       images: [
         {
-          url: project.heroImage?.src || '/og-image.jpg',
+          url: project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.jpg',
           width: 1200,
           height: 630,
           alt: project.title,
+          type: 'image/png',
+        },
+        {
+          url: 'https://greenhillsinternational.com/og/og-project.jpg',
+          width: 800,
+          height: 420,
+          alt: 'Construction Project',
+          type: 'image/png',
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.title,
+      description: `${project.title} - Premium ${project.category} construction project by Green Hills International.`,
+      images: [project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.jpg'],
+    },
+    alternates: {
+      canonical: `https://greenhillsinternational.com/projects/${projectId}`,
     },
   };
 }
