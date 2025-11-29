@@ -30,11 +30,11 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} | Green Hills International Projects`,
-    description: project.overview.description || `${project.title} - A ${project.category} project by Green Hills International located in ${project.location}.`,
-    keywords: [project.category, project.location, 'project', 'construction', 'green hills'],
+    description: `${project.title} - Premium ${project.category} project in ${project.location}. Built by Green Hills International with quality craftsmanship & innovation.`,
+    keywords: [project.category, project.location, 'project', 'construction', 'contractor', 'Dubai'],
     openGraph: {
       title: project.title,
-      description: project.overview.description,
+      description: `Explore ${project.title}, a showcase of excellence in ${project.category.toLowerCase()} construction.`,
       type: 'website',
       images: [
         {

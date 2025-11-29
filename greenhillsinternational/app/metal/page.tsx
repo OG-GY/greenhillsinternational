@@ -12,11 +12,11 @@ import MetalAboutSection from '../components/MetalAboutSection';
 
 export const metadata: Metadata = {
   title: 'Metal Trading & Industrial Materials | Green Hills International',
-  description: 'UAE-based metal trading company specializing in ferrous and non-ferrous metals, steel products, industrial ores, and scrap materials. Global supply chain solutions.',
+  description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials. Reliable global supply chain solutions for industries.',
   keywords: ['metal trading', 'scrap trading', 'ferrous metals', 'non-ferrous metals', 'steel products', 'industrial materials', 'Dubai', 'UAE'],
   openGraph: {
     title: 'Metal Trading & Industrial Materials | Green Hills International',
-    description: 'International metal trading solutions providing ferrous, non-ferrous, and recycled materials for global supply chains.',
+    description: 'Trusted metal trading partner providing quality ferrous, non-ferrous & recycled materials with efficient global supply chain.',
     type: 'website',
   },
 };

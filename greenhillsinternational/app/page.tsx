@@ -3,11 +3,11 @@ import LandingSection from "./components/LandingSection";
 
 export const metadata: Metadata = {
   title: 'Green Hills International | Construction & Metal Trading UAE',
-  description: 'UAE-based construction and metal trading company offering world-class building projects and comprehensive metal trading solutions in Dubai.',
+  description: 'Leading construction and metal trading company in Dubai & UAE. Premium building projects, MEP services, and global metal supply chain solutions. Expert contractors.',
   keywords: ['construction', 'metal trading', 'UAE', 'Dubai', 'industrial materials', 'scrap trading', 'building contractor'],
   openGraph: {
     title: 'Green Hills International | Construction & Metal Trading',
-    description: 'Leading construction and metal trading company in UAE. Delivering excellence in construction projects and metal trading solutions.',
+    description: 'Trusted construction contractor and metal trading partner delivering world-class projects and industrial solutions in UAE.',
     type: 'website',
     locale: 'en_AE',
   },

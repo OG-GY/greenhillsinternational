@@ -6,11 +6,11 @@ import { ContactInfo } from '@/app/components/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Green Hills International',
-  description: 'Get in touch with Green Hills International. Contact our construction and metal trading teams for quotes, inquiries, and partnership opportunities.',
+  description: 'Connect with Green Hills International today. Get quotes & support for construction & metal trading. Call +971 55 334 4874 or email us now.',
   keywords: ['contact', 'inquiry', 'quote', 'construction services', 'metal trading', 'support'],
   openGraph: {
     title: 'Contact Us | Green Hills International',
-    description: 'Reach out to our team for construction and metal trading inquiries. Call +971 55 334 4874 or email us today.',
+    description: 'Reach our construction & metal trading teams. Get expert support, quotes & partnership opportunities. Contact us now!',
     type: 'website',
   },
 };

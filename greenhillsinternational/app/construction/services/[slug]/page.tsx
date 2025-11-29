@@ -24,12 +24,12 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${service.title} | Construction Services | Green Hills International`,
-    description: `Expert ${service.title.toLowerCase()} services by Green Hills International. Professional construction solutions with years of industry expertise.`,
-    keywords: [service.title, 'construction', 'services', 'Dubai', 'UAE', 'contractor'],
+    title: `${service.title} | Green Hills International`,
+    description: `Professional ${service.title.toLowerCase()} by Green Hills International. Expert solutions with proven track record & quality workmanship in Dubai.`,
+    keywords: [service.title, 'construction services', 'contractor', 'Dubai', 'UAE', 'professional', 'quality'],
     openGraph: {
-      title: service.title,
-      description: `Professional ${service.title.toLowerCase()} services tailored to your project needs.`,
+      title: `${service.title} Services`,
+      description: `Expert ${service.title.toLowerCase()} contractor delivering premium construction solutions tailored to your project needs.`,
       type: 'website',
     },
   };

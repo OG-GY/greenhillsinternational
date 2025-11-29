@@ -26,11 +26,11 @@ export async function generateMetadata({
 
   return {
     title: `${domain.title} | Metal Trading | Green Hills International`,
-    description: domain.summary || `Professional ${domain.title.toLowerCase()} trading solutions by Green Hills International. Global supplier of quality materials.`,
-    keywords: [domain.title, 'metal trading', 'industrial materials', 'scrap trading', 'UAE', 'Dubai'],
+    description: `${domain.title} trading solutions by Green Hills International. Quality materials & reliable global supply chain for industries.`,
+    keywords: [domain.title, 'metal trading', 'industrial supplier', 'global trade', 'UAE', 'Dubai'],
     openGraph: {
-      title: domain.title,
-      description: domain.summary,
+      title: `${domain.title} Trading Solutions`,
+      description: `Professional ${domain.title.toLowerCase()} trading with guaranteed quality & competitive pricing.`,
       type: 'website',
     },
   };

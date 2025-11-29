@@ -11,11 +11,11 @@ import BookAppointment from "../components/BookAppointment"
 
 export const metadata: Metadata = {
   title: 'Construction Services | Green Hills International',
-  description: 'Professional construction services in UAE including civil construction, MEP services, infrastructure, and facades. Award-winning contractor delivering world-class projects.',
+  description: 'Expert construction services in Dubai & UAE. Civil construction, MEP services, infrastructure, facades & more. Award-winning contractor with proven track record.',
   keywords: ['construction services', 'civil construction', 'MEP services', 'infrastructure', 'facades', 'Dubai construction', 'building contractor'],
   openGraph: {
     title: 'Construction Services | Green Hills International',
-    description: 'Expert construction contractor offering comprehensive building solutions including design, MEP, and project management.',
+    description: 'Professional construction contractor delivering design, MEP, project management & comprehensive building solutions in Dubai.',
     type: 'website',
   },
 };
