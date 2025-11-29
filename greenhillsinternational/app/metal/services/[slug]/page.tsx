@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import ServiceDetailLayout from '../../../components/ServiceDetailLayout';
 import { getAllMetalDomainSlugs, getMetalDomainBySlug } from '@/app/lib/metalservicedata';
 
@@ -7,6 +8,30 @@ type PageProps = {
 
 export function generateStaticParams() {
   return getAllMetalDomainSlugs().map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getMetalDomainBySlug(slug);
+
+  if (!service) {
+    return {
+      title: 'Metal Trading | Green Hills International',
+    };
+  }
+
+  return {
+    title: `${service.title} Trading | Green Hills International`,
+    description: `Professional ${service.title.toLowerCase()} trading services. Quality materials and reliable supply chain solutions.`,
+    keywords: [service.title, 'metal trading', 'industrial materials', 'supplier', 'UAE', 'Dubai'],
+    openGraph: {
+      title: service.title,
+      description: service.description || `High-quality ${service.title.toLowerCase()} trading solutions.`,
+      type: 'website',
+    },
+  };
 }
 
 const ServicePage = async ({ params }: PageProps) => {

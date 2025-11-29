@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ProjectDetailLayout from '@/app/components/ProjectDetailLayout';
 import AlternatingSection from '@/app/components/AlternatingSection';
@@ -10,6 +11,41 @@ export async function generateStaticParams() {
   return allProjects.map((project) => ({
     projectId: project.id,
   }));
+}
+
+// Dynamic metadata for each project
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ projectId: string }>;
+}): Promise<Metadata> {
+  const { projectId } = await params;
+  const project = getProjectById(projectId);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found | Green Hills International',
+    };
+  }
+
+  return {
+    title: `${project.title} | Green Hills International Projects`,
+    description: project.overview.description || `${project.title} - A ${project.category} project by Green Hills International located in ${project.location}.`,
+    keywords: [project.category, project.location, 'project', 'construction', 'green hills'],
+    openGraph: {
+      title: project.title,
+      description: project.overview.description,
+      type: 'website',
+      images: [
+        {
+          url: project.heroImage?.src || '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+  };
 }
 
 // Page component
