@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     locale: 'en_AE',
     images: [
       {
-        url: 'https://greenhillsinternational.com/og/og-contact.jpg',
+        url: 'https://greenhillsinternational.com/og/og-contact.png',
         width: 1200,
         height: 630,
         alt: 'Contact Green Hills International',
         type: 'image/png',
       },
       {
-        url: 'https://greenhillsinternational.com/og/og-contact.jpg',
+        url: 'https://greenhillsinternational.com/og/og-contact.png',
         width: 800,
         height: 420,
         alt: 'Contact Us',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | Green Hills International',
     description: 'Reach our teams. Get expert support, quotes & partnership opportunities.',
-    images: ['https://greenhillsinternational.com/og/og-contact.jpg'],
+    images: ['https://greenhillsinternational.com/og/og-contact.png'],
   },
   alternates: {
     canonical: 'https://greenhillsinternational.com/contact',

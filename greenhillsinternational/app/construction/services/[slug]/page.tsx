@@ -36,14 +36,14 @@ export async function generateMetadata({
       locale: 'en_AE',
       images: [
         {
-          url: 'https://greenhillsinternational.com/og/og-service.jpg',
+          url: 'https://greenhillsinternational.com/og/og-service.png',
           width: 1200,
           height: 630,
           alt: `${service.title} Service`,
           type: 'image/png',
         },
         {
-          url: 'https://greenhillsinternational.com/og/og-service.jpg',
+          url: 'https://greenhillsinternational.com/og/og-service.png',
           width: 800,
           height: 420,
           alt: 'Service Details',
@@ -55,7 +55,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${service.title} Services`,
       description: `Professional ${service.title.toLowerCase()} by Green Hills International.`,
-      images: ['https://greenhillsinternational.com/og/og-service.jpg'],
+      images: ['https://greenhillsinternational.com/og/og-service.png'],
     },
     alternates: {
       canonical: `https://greenhillsinternational.com/construction/services/${slug}`,

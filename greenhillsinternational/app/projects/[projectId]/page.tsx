@@ -41,14 +41,14 @@ export async function generateMetadata({
       locale: 'en_AE',
       images: [
         {
-          url: project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.jpg',
+          url: project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.png',
           width: 1200,
           height: 630,
           alt: project.title,
           type: 'image/png',
         },
         {
-          url: 'https://greenhillsinternational.com/og/og-project.jpg',
+          url: 'https://greenhillsinternational.com/og/og-project.png',
           width: 800,
           height: 420,
           alt: 'Construction Project',
@@ -60,7 +60,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: project.title,
       description: `${project.title} - Premium ${project.category} construction project by Green Hills International.`,
-      images: [project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.jpg'],
+      images: [project.heroImage?.src || 'https://greenhillsinternational.com/og/og-project.png'],
     },
     alternates: {
       canonical: `https://greenhillsinternational.com/projects/${projectId}`,

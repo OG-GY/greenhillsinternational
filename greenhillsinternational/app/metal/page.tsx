@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import heroMetal from '../assets/metals/hero-metal.png';
+import heroMetal from '../assets/metals/hero-metal.jpg';
 import { metalDomains } from '../lib/metalservicedata';
 import ServicesSection from '../components/ServicesSection';
 import SustainabilitySection from '../components/SustainabilitySection';

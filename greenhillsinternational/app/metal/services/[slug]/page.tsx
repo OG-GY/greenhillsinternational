@@ -35,14 +35,14 @@ export async function generateMetadata({
       locale: 'en_AE',
       images: [
         {
-          url: 'https://greenhillsinternational.com/og/og-service.jpg',
+          url: 'https://greenhillsinternational.com/og/og-service.png',
           width: 1200,
           height: 630,
           alt: `${service.title} Service`,
           type: 'image/png',
         },
         {
-          url: 'https://greenhillsinternational.com/og/og-service.jpg',
+          url: 'https://greenhillsinternational.com/og/og-service.png',
           width: 800,
           height: 420,
           alt: 'Metal Trading Service',
@@ -54,7 +54,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${service.title} Trading Solutions`,
       description: `Expert ${service.title.toLowerCase()} trading with quality materials & reliable supply.`,
-      images: ['https://greenhillsinternational.com/og/og-service.jpg'],
+      images: ['https://greenhillsinternational.com/og/og-service.png'],
     },
     alternates: {
       canonical: `https://greenhillsinternational.com/metal/services/${slug}`,

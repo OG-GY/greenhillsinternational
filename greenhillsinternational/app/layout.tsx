@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Green Hills International" }],
   creator: "Green Hills International",
   publisher: "Green Hills International",
+  metadataBase: new URL("https://greenhillsinternational.com"),
   formatDetection: {
     email: false,
     address: false,
