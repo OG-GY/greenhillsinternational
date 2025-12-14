@@ -63,7 +63,6 @@ const organizationSchema = {
     "Copper Trading"
   ],
   sameAs: [
-    "https://www.linkedin.com/company/greenhillsinternational",
     "https://www.facebook.com/greenhillsinternational",
     "https://www.instagram.com/greenhillsinternational",
     "https://twitter.com/greenhillsintl"

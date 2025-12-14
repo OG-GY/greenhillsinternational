@@ -101,7 +101,7 @@ export const metadata: Metadata = {
     creator: "@greenhillsintl",
   },
   verification: {
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    google: "dcBp0qgqHRQzPc8oFzfm6tDJ8VebMjXj8Zj0q6KLvNg",
     yandex: "YOUR_YANDEX_VERIFICATION_CODE",
     other: {
       "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
