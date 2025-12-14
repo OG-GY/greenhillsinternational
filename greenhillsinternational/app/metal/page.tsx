@@ -9,16 +9,38 @@ import { metalDomains } from '../lib/metalservicedata';
 import ServicesSection from '../components/ServicesSection';
 import SustainabilitySection from '../components/SustainabilitySection';
 import MetalAboutSection from '../components/MetalAboutSection';
+import BreadcrumbSchema from '../components/BreadcrumbSchema';
+import ServicePageSchema from '../components/ServicePageSchema';
+import FAQSchema, { metalFAQs } from '../components/FAQSchema';
 
 export const metadata: Metadata = {
-  title: 'Metal Trading & Industrial Materials | Green Hills International',
-  description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials. Reliable global supply chain solutions for industries.',
-  keywords: ['Green Hills International','metal trading', 'scrap trading', 'ferrous metals', 'non-ferrous metals', 'steel products', 'industrial materials', 'Dubai', 'UAE'],
+  title: 'Metal Trading Dubai & UAE | Best Metal Services | Green Hills International',
+  description: 'Green Hills International: Best metal trading company in UAE & Dubai. Ferrous, non-ferrous metals, steel, scrap trading & industrial materials. Global supply chain solutions.',
+  keywords: [
+    'Green Hills International',
+    'Green Hills metal trading',
+    'metal trading UAE',
+    'metal trading Dubai',
+    'best metal services in UAE',
+    'best metal trading company Dubai',
+    'scrap trading UAE',
+    'scrap trading Dubai',
+    'ferrous metals UAE',
+    'non-ferrous metals Dubai',
+    'steel trading UAE',
+    'aluminum suppliers Dubai',
+    'copper trading UAE',
+    'metal suppliers Dubai',
+    'industrial materials UAE',
+    'metal ores trading',
+    'recycled metals UAE',
+    'metal export Dubai'
+  ],
   openGraph: {
     type: 'website',
     url: 'https://greenhillsinternational.com/metal',
-    title: 'Metal Trading & Industrial Materials | Green Hills International',
-    description: 'Premier metal trading company in Dubai & UAE. Ferrous, non-ferrous metals, steel, ores & scrap materials.',
+    title: 'Metal Trading Dubai & UAE | Best Metal Services | Green Hills International',
+    description: 'Green Hills International: Best metal trading company in UAE. Ferrous, non-ferrous metals, steel, scrap & industrial materials.',
     siteName: 'Green Hills International',
     locale: 'en_AE',
     images: [
@@ -26,22 +48,22 @@ export const metadata: Metadata = {
         url: 'https://greenhillsinternational.com/og/og-metal.png',
         width: 1200,
         height: 630,
-        alt: 'Green Hills International - Metal Trading',
+        alt: 'Green Hills International - Metal Trading in Dubai UAE',
         type: 'image/png',
       },
       {
         url: 'https://greenhillsinternational.com/og/og-metal.png',
         width: 800,
         height: 420,
-        alt: 'Metal Trading & Industrial Materials',
+        alt: 'Green Hills Metal Trading Services',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Metal Trading & Industrial Materials | Green Hills International',
-    description: 'Premier metal trading company providing ferrous, non-ferrous metals, and scrap materials globally.',
+    title: 'Metal Trading | Green Hills International',
+    description: 'Best metal trading company in Dubai & UAE providing ferrous, non-ferrous metals, and scrap materials globally.',
     images: ['https://greenhillsinternational.com/og/og-metal.png'],
   },
   alternates: {
@@ -53,6 +75,25 @@ const Metal = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <BreadcrumbSchema 
+        items={[
+          { name: "Home", url: "https://greenhillsinternational.com" },
+          { name: "Metal Trading", url: "https://greenhillsinternational.com/metal" }
+        ]} 
+      />
+      <ServicePageSchema
+        name="Metal Trading & Industrial Materials"
+        description="Comprehensive metal trading and industrial materials supply in Dubai and UAE. Ferrous metals, non-ferrous metals, steel products, scrap trading, and recycled materials."
+        url="https://greenhillsinternational.com/metal"
+        category="metal"
+        services={[
+          { name: "Ferrous Metals", description: "Iron, steel, and alloy trading services", url: "https://greenhillsinternational.com/metal/ferrous-metals" },
+          { name: "Non-Ferrous Metals", description: "Aluminum, copper, brass, and specialty metals", url: "https://greenhillsinternational.com/metal/non-ferrous-metals" },
+          { name: "Scrap Trading", description: "Metal scrap and recycled materials trading", url: "https://greenhillsinternational.com/metal/scrap-trading" },
+          { name: "Steel Products", description: "Structural steel and steel products supply", url: "https://greenhillsinternational.com/metal/steel-products" }
+        ]}
+      />
+      <FAQSchema faqs={metalFAQs} />
       <Navigation changeOnScroll={false} />
       
       <main className="flex-1">
