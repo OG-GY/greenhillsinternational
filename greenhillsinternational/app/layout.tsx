@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Green Hills International", url: "https://greenhillsinternational.com" }],
   creator: "Green Hills International",
   publisher: "Green Hills International",
-  metadataBase: new URL("https://greenhillsinternational.com"),
+  metadataBase: new URL("https://www.greenhillsinternational.com"),
   applicationName: "Green Hills International",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",

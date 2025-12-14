@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/.next/'],
       },
     ],
-    sitemap: 'https://greenhillsinternational.com/sitemap.xml',
+    sitemap: 'https://www.greenhillsinternational.com/sitemap.xml',
   };
 }
