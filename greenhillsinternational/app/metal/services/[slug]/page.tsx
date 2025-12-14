@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import ServiceDetailLayout from '../../../components/ServiceDetailLayout';
 import { getAllMetalDomainSlugs, getMetalDomainBySlug } from '@/app/lib/metalservicedata';
+import BreadcrumbSchema from '../../../components/BreadcrumbSchema';
+import ServicePageSchema from '../../../components/ServicePageSchema';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -28,21 +30,21 @@ export async function generateMetadata({
     keywords: [service.title, 'metal trading', 'industrial supplier', 'quality materials', 'UAE', 'Dubai'],
     openGraph: {
       type: 'website',
-      url: `https://greenhillsinternational.com/metal/services/${slug}`,
+      url: `https://www.greenhillsinternational.com/metal/services/${slug}`,
       title: `${service.title} Trading Solutions`,
       description: `Expert ${service.title.toLowerCase()} trading services. Premium quality materials with competitive pricing.`,
       siteName: 'Green Hills International',
       locale: 'en_AE',
       images: [
         {
-          url: 'https://greenhillsinternational.com/og/og-service.png',
+          url: 'https://www.greenhillsinternational.com/og/og-service.png',
           width: 1200,
           height: 630,
           alt: `${service.title} Service`,
           type: 'image/png',
         },
         {
-          url: 'https://greenhillsinternational.com/og/og-service.png',
+          url: 'https://www.greenhillsinternational.com/og/og-service.png',
           width: 800,
           height: 420,
           alt: 'Metal Trading Service',
@@ -54,10 +56,10 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${service.title} Trading Solutions`,
       description: `Expert ${service.title.toLowerCase()} trading with quality materials & reliable supply.`,
-      images: ['https://greenhillsinternational.com/og/og-service.png'],
+      images: ['https://www.greenhillsinternational.com/og/og-service.png'],
     },
     alternates: {
-      canonical: `https://greenhillsinternational.com/metal/services/${slug}`,
+      canonical: `https://www.greenhillsinternational.com/metal/services/${slug}`,
     },
   };
 }
@@ -73,6 +75,19 @@ const ServicePage = async ({ params }: PageProps) => {
   return (
     <ServiceDetailLayout title={service.title}>
       {/* Render domain details using tab interface instead */}
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://www.greenhillsinternational.com' },
+          { name: 'Metal Trading', url: 'https://www.greenhillsinternational.com/metal' },
+          { name: service.title, url: `https://www.greenhillsinternational.com/metal/services/${slug}` },
+        ]}
+      />
+      <ServicePageSchema
+        name={`${service.title} Trading`}
+        description={`Expert ${service.title.toLowerCase()} trading services in Dubai & UAE by Green Hills International.`}
+        url={`https://www.greenhillsinternational.com/metal/services/${slug}`}
+        category="metal"
+      />
       <div className="py-12">
         <p className="text-lg text-muted-foreground">{service.description}</p>
       </div>

@@ -4,7 +4,7 @@ import Script from "next/script";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://greenhillsinternational.com/#organization",
+  "@id": "https://www.greenhillsinternational.com/#organization",
   name: "Green Hills International",
   alternateName: [
     "Green Hills",
@@ -14,14 +14,14 @@ const organizationSchema = {
     "Green Hills Construction",
     "Green Hills Metal Trading"
   ],
-  url: "https://greenhillsinternational.com",
+  url: "https://www.greenhillsinternational.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://greenhillsinternational.com/logo.png",
+    url: "https://www.greenhillsinternational.com/logo.png",
     width: 300,
     height: 100
   },
-  image: "https://greenhillsinternational.com/og/og-default.png",
+  image: "https://www.greenhillsinternational.com/og/og-default.png",
   description: "Green Hills International is a leading construction and metal trading company in UAE and Dubai. We provide premium construction services, MEP solutions, industrial materials, and global metal supply chain solutions.",
   foundingDate: "2015",
   foundingLocation: {
@@ -63,9 +63,10 @@ const organizationSchema = {
     "Copper Trading"
   ],
   sameAs: [
-    // "https://www.facebook.com/greenhillsinternational",
-    // "https://www.instagram.com/greenhillsinternational",
-    // "https://twitter.com/greenhillsintl"
+    "https://www.linkedin.com/company/green-hills-international-construction",
+    "https://www.facebook.com/greenhillsinternational",
+    "https://www.instagram.com/greenhillsinternational",
+    "https://twitter.com/greenhillsintl"
   ],
   contactPoint: [
     {

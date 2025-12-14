@@ -2,6 +2,8 @@ import { Metadata } from 'next';
 import ServiceDetailLayout from '../../../components/ServiceDetailLayout';
 import AlternatingSection from '../../../components/AlternatingSection';
 import { getAllServiceSlugs, getServiceBySlug } from '../../../lib/servicedata';
+import BreadcrumbSchema from '../../../components/BreadcrumbSchema';
+import ServicePageSchema from '../../../components/ServicePageSchema';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -29,21 +31,21 @@ export async function generateMetadata({
     keywords: [service.title, 'construction services', 'contractor', 'Dubai', 'UAE', 'professional', 'quality'],
     openGraph: {
       type: 'website',
-      url: `https://greenhillsinternational.com/construction/services/${slug}`,
+      url: `https://www.greenhillsinternational.com/construction/services/${slug}`,
       title: `${service.title} Services`,
       description: `Professional ${service.title.toLowerCase()} by Green Hills International. Expert solutions with proven track record.`,
       siteName: 'Green Hills International',
       locale: 'en_AE',
       images: [
         {
-          url: 'https://greenhillsinternational.com/og/og-service.png',
+          url: 'https://www.greenhillsinternational.com/og/og-service.png',
           width: 1200,
           height: 630,
           alt: `${service.title} Service`,
           type: 'image/png',
         },
         {
-          url: 'https://greenhillsinternational.com/og/og-service.png',
+          url: 'https://www.greenhillsinternational.com/og/og-service.png',
           width: 800,
           height: 420,
           alt: 'Service Details',
@@ -55,10 +57,10 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${service.title} Services`,
       description: `Professional ${service.title.toLowerCase()} by Green Hills International.`,
-      images: ['https://greenhillsinternational.com/og/og-service.png'],
+      images: ['https://www.greenhillsinternational.com/og/og-service.png'],
     },
     alternates: {
-      canonical: `https://greenhillsinternational.com/construction/services/${slug}`,
+      canonical: `https://www.greenhillsinternational.com/construction/services/${slug}`,
     },
   };
 }
@@ -73,6 +75,19 @@ const ServicePage = async ({ params }: PageProps) => {
 
   return (
     <ServiceDetailLayout title={service.title}>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://www.greenhillsinternational.com' },
+          { name: 'Construction Services', url: 'https://www.greenhillsinternational.com/construction' },
+          { name: service.title, url: `https://www.greenhillsinternational.com/construction/services/${slug}` },
+        ]}
+      />
+      <ServicePageSchema
+        name={service.title}
+        description={`Professional ${service.title.toLowerCase()} services in Dubai & UAE by Green Hills International.`}
+        url={`https://www.greenhillsinternational.com/construction/services/${slug}`}
+        category="construction"
+      />
       {service.sections.map((section, index) => (
         <AlternatingSection
           key={index}

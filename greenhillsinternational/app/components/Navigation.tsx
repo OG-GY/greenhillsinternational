@@ -34,12 +34,12 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
   }, [changeOnScroll]);
 
   const navItems = [
-    { label: 'About Us', href: '/' },
+    { label: 'About Green Hills International', href: '/' },
     { label: 'Construction', href: '/construction' },
     { label: 'Construction Services', href: '/construction#services' },
     { label: 'Metals', href: '/metal' },
     { label: 'Metals Services', href: '/metal#services' },
-    { label: 'Contact Us', href: '/contact' },
+    { label: 'Contact Green Hills International', href: '/contact' },
   ];
 
   // showBlue should be true when the navbar must display the solid blue background.
@@ -63,13 +63,13 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="text-primary-foreground text-sm font-medium tracking-wider hover:text-accent transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -88,14 +88,14 @@ const Navigation = ({ changeOnScroll = true }: NavigationProps) => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-2">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="block text-primary-foreground text-sm font-medium tracking-wider py-2 hover:text-accent transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         )}
