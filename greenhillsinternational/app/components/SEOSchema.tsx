@@ -63,21 +63,21 @@ const organizationSchema = {
     "Copper Trading"
   ],
   sameAs: [
-    "https://www.facebook.com/greenhillsinternational",
-    "https://www.instagram.com/greenhillsinternational",
-    "https://twitter.com/greenhillsintl"
+    // "https://www.facebook.com/greenhillsinternational",
+    // "https://www.instagram.com/greenhillsinternational",
+    // "https://twitter.com/greenhillsintl"
   ],
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+971-4-XXX-XXXX",
+      telephone: "+971 50 496 7289",
       contactType: "customer service",
       areaServed: "AE",
       availableLanguage: ["English", "Arabic", "Hindi"]
     },
     {
       "@type": "ContactPoint",
-      telephone: "+971-4-XXX-XXXX",
+      telephone: "+971 55 334 4874",
       contactType: "sales",
       areaServed: "AE",
       availableLanguage: ["English", "Arabic"]
@@ -103,7 +103,7 @@ const localBusinessSchema = {
   image: "https://greenhillsinternational.com/og/og-default.png",
   logo: "https://greenhillsinternational.com/logo.png",
   url: "https://greenhillsinternational.com",
-  telephone: "+971-4-XXX-XXXX",
+  telephone: "+971 55 334 4874",
   email: "info@greenhillsinternational.com",
   description: "Green Hills International - Premier construction company and metal trading specialists in Dubai, UAE. Offering luxury residential, commercial construction, MEP services, and comprehensive metal supply chain solutions.",
   priceRange: "$$$",
