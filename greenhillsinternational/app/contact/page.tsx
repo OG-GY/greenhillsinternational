@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import Navigation from '@/app/components/Navigation';
-import Footer from '@/app/components/Footer';
 import { ContactForm } from '@/app/components/ContactForm';
 import { ContactInfo } from '@/app/components/ContactInfo';
 
@@ -47,7 +45,6 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-primary">
@@ -84,8 +81,6 @@ const ContactUs = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

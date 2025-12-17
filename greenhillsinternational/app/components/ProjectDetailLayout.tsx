@@ -1,6 +1,4 @@
 import { ReactNode } from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
 import Image, { StaticImageData } from 'next/image';
 
 interface ProjectDetailLayoutProps {
@@ -20,7 +18,6 @@ const ProjectDetailLayout = ({
 }: ProjectDetailLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation changeOnScroll={false} />
       
       <main className="flex-1">
         {/* Hero Section with Background Image */}
@@ -79,8 +76,6 @@ const ProjectDetailLayout = ({
         {/* Content Sections */}
         {children}
       </main>
-
-      <Footer />
     </div>
   );
 };

@@ -1,6 +1,4 @@
 import { ReactNode } from 'react';
-import Navigation from './Navigation';
-import Footer from './Footer';
 
 interface ServiceDetailLayoutProps {
   children: ReactNode;
@@ -12,7 +10,6 @@ const ServiceDetailLayout = ({ children, title }: ServiceDetailLayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Force the navbar to always show the blue background on service detail pages */}
-      <Navigation changeOnScroll={false} />
       
       <main className="flex-1">
         {/* Hero Section */}
@@ -38,8 +35,6 @@ const ServiceDetailLayout = ({ children, title }: ServiceDetailLayoutProps) => {
         {/* Content Sections */}
         {children}
       </main>
-
-      <Footer />
     </div>
   );
 };

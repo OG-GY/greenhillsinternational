@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Navigation from '@/app/components/Navigation';
-import Footer from '@/app/components/Footer';
 import { MetalDomainDetail } from '@/app/lib/metalservicedata';
 import { Button } from '@/app/components/ui/button';
 import Link from 'next/link';
@@ -36,8 +34,7 @@ export default function MetalServiceDetailClient({ domain }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation  changeOnScroll={false} />
-
+      
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-deep-navy to-deep-navy/90">
@@ -214,8 +211,6 @@ export default function MetalServiceDetailClient({ domain }: Props) {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }
