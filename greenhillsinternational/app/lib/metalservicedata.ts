@@ -14,6 +14,10 @@ export type MetalDomainDetail = {
     value: string;
   }>;
   applications: string[];
+  subdomains?: Array<{
+    title: string;
+    description: string;
+  }>;
 };
 
 export const metalDomains: MetalDomainDetail[] = [
@@ -23,7 +27,18 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Comprehensive Scrap & Recyclables Trading',
     summary: 'Complete scrap trading solutions covering ferrous, non-ferrous, plastic, wood, e-waste, rubber, and mixed industrial materials.',
     path: '/metal/scrap',
-    description: 'We offer comprehensive scrap and recyclables trading solutions encompassing all major waste streams. From post-consumer packaging to industrial process waste, we manage ferrous scrap, non-ferrous metals, plastics, wood waste, e-waste, rubber, and mixed materials. Our sourcing network spans manufacturers, processors, collection centers, and waste management facilities globally.',
+    description: 'Green Hills Metals provides full-scope trading of industrial scrap and recyclable materials, covering collection, segregation, processing, recycling, import, export, and resale.',
+    subdomains: [
+      { title: 'Ferrous Scrap', description: 'Iron-based scrap including steel, cast iron, structural steel, machinery scrap, demolition scrap, vehicle bodies, and industrial offcuts, recycled into new steel products.' },
+      { title: 'Non-Ferrous Scrap', description: 'Aluminium, copper, brass, bronze, zinc, nickel, lead, stainless steel, and mixed alloy scrap sourced from industrial, automotive, electrical, and construction sectors.' },
+      { title: 'Wire & Cable Scrap', description: 'Insulated, armoured, and unarmoured copper and aluminium cables recovered from electrical systems, power networks, telecom infrastructure, and industrial equipment.' },
+      { title: 'Electronic & Electrical Scrap (E-Waste)', description: 'End-of-life electronics such as computers, mobile phones, servers, household appliances, circuit boards, transformers, and electronic components containing recoverable metals.' },
+      { title: 'Plastic Scrap & Polymers', description: 'Recyclable plastics including PET, HDPE, LDPE, PVC, PP, ABS, mixed plastics, and industrial polymer waste.' },
+      { title: 'Rubber & Tyre Scrap', description: 'Used tyres, industrial rubber products, conveyor belts, and rubber waste recycled into crumb rubber, fuel, construction materials, and secondary rubber products.' },
+      { title: 'Wood & Timber Scrap', description: 'Pallets, lumber waste, sawdust, plywood, MDF, and construction wood reclaimed for reuse, recycling, or energy recovery.' },
+      { title: 'Mixed Industrial Scrap', description: 'Heterogeneous industrial waste such as damaged inventory, obsolete machinery parts, production rejects, factory waste, and construction debris.' },
+      { title: 'Secondary Raw Materials', description: 'Processed scrap, shredded metals, baled plastics, and sorted recyclables used as feedstock for manufacturing and metal production.' }
+    ],
     capabilities: [
       'Ferrous scrap collection and grading',
       'Non-ferrous metal separation and processing',
@@ -57,7 +72,15 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Non-Ferrous Metal Trading',
     summary: 'Premium trading of aluminium, copper, specialty alloys, and automotive components for aerospace and electronics industries.',
     path: '/metal/non-ferrous',
-    description: 'Specializing in premium non-ferrous metal trading, we source and supply high-quality aluminium, copper, zinc, nickel, tin, and specialty alloys. Our portfolio includes primary metals, recycled secondary materials, and engineered alloys meeting stringent aerospace, automotive, and electronics specifications.',
+    description: 'Green Hills Metals trades a broad range of virgin, recycled, and semi-finished non-ferrous metals used across high-growth industrial sectors.',
+    subdomains: [
+      { title: 'Aluminium & Aluminium Alloys', description: 'Ingots, billets, sheets, plates, coils, extrusions, and scrap aluminium for construction, packaging, transportation, and manufacturing.' },
+      { title: 'Copper & Copper Alloys', description: 'Copper cathodes, rods, wires, strips, and brass/bronze alloys for electrical, plumbing, electronics, and industrial applications.' },
+      { title: 'Zinc, Lead & Nickel', description: 'Primary and secondary metals used in galvanizing, batteries, alloys, and industrial manufacturing.' },
+      { title: 'Specialty & High-Performance Alloys', description: 'Titanium, magnesium, nickel-based alloys, and specialty metals for aerospace, medical, marine, energy, and advanced engineering sectors.' },
+      { title: 'Automotive Non-Ferrous Metals & Components', description: 'Aluminium body panels, engine components, copper radiators, heat exchangers, and reusable automotive parts.' },
+      { title: 'Electronic-Grade Metals', description: 'High-purity non-ferrous metals and scrap used in electronics, electrical systems, and precision manufacturing.' }
+    ],
     capabilities: [
       'Aluminum ingots and extrusions',
       'Copper cathodes and wire rods',
@@ -95,7 +118,16 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Steel & Basic Steel Products Trading',
     summary: 'Comprehensive ferrous materials including structural steel, sheets, plates, stainless steel, and pipes for global infrastructure.',
     path: '/metal/steel',
-    description: 'Our steel trading operations cover the complete spectrum of ferrous products. From structural grades to stainless varieties, we supply hot-rolled, cold-rolled, and coated steel products meeting international standards. Our relationships with major mills ensure consistent quality and competitive pricing.',
+    description: 'Steel trading forms a core pillar of Green Hills Metals’ operations, serving infrastructure, construction, and industrial markets.',
+    subdomains: [
+      { title: 'Carbon & Alloy Steel', description: 'Structural, mild, and alloy steel products for fabrication and heavy industry.' },
+      { title: 'Structural Steel & Reinforcement', description: 'Beams, columns, angles, channels, joists, and reinforcement bars (rebar) for buildings and infrastructure.' },
+      { title: 'Steel Sheets, Plates & Coils', description: 'Hot-rolled, cold-rolled, galvanized, and coated sheets and plates for shipbuilding, machinery, and manufacturing.' },
+      { title: 'Stainless Steel Products', description: 'Industrial, food-grade, medical, and chemical-grade stainless steel sheets, pipes, and components.' },
+      { title: 'Steel Pipes & Tubes', description: 'Seamless and welded pipes and tubes for oil & gas, plumbing, mechanical, and industrial systems.' },
+      { title: 'Automotive Steel Metals & Components', description: 'Steel chassis parts, body panels, engine blocks, surplus components, and scrap from end-of-life vehicles.' },
+      { title: 'New, Surplus & Recycled Steel', description: 'Primary steel products, excess inventory, and recycled steel materials.' }
+    ],
     capabilities: [
       'Structural steel beams and angles',
       'Hot-rolled and cold-rolled coils',
@@ -133,7 +165,15 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Metal Ores & Raw Materials Trading',
     summary: 'Primary feedstocks including iron ore, bauxite, alumina, ferroalloys, and industrial minerals for metal production worldwide.',
     path: '/metal/ores',
-    description: 'We trade in essential raw materials and ores that serve as primary feedstocks for global metal production. Our portfolio includes iron ore, bauxite, alumina, ferroalloys, and specialized industrial minerals sourced from major mining regions worldwide.',
+    description: 'This domain covers both primary metal feedstocks and secondary raw materials used in metal production.',
+    subdomains: [
+      { title: 'Iron Ore & Pellets', description: 'Iron ore lumps, fines, and pellets supplied to steel mills and foundries.' },
+      { title: 'Bauxite and alumina', description: 'Aluminium ore and refined alumina for smelters and metal producers.' },
+      { title: 'Copper & Base-Metal Concentrates', description: 'Concentrates and ores used in refining and smelting operations.' },
+      { title: 'Ferrous & Non-Ferrous Scrap as Feedstock', description: 'Secondary raw materials supplementing primary ore supply.' },
+      { title: 'Ferroalloys & Pig Iron', description: 'Ferrochrome, ferromanganese, ferrosilicon, pig iron, and foundry alloys.' },
+      { title: 'Industrial Minerals & Fluxes', description: 'Silica, limestone, and other additives used in metallurgical and industrial processes.' }
+    ],
     capabilities: [
       'Iron ore (pellets, fines, lumps)',
       'Bauxite and alumina',
@@ -171,7 +211,16 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Cargo Containers Trading',
     summary: 'New, used, and specialized shipping containers with modifications, accessories, and comprehensive logistics services.',
     path: '/metal/containers',
-    description: 'We supply and trade in new, used, and specialized shipping containers. Our inventory includes standard 20ft and 40ft containers, high-cube variants, and custom-modified units for specialized cargo. We also offer container accessories, refurbishment services, and logistics coordination.',
+    description: 'Green Hills Metals trades shipping and industrial containers to support global logistics, storage, and modular infrastructure.',
+    subdomains: [
+      { title: 'New Shipping Containers', description: 'Factory-new 20ft, 40ft, and high-cube dry containers.' },
+      { title: 'Used & Refurbished Containers', description: 'Pre-owned containers inspected, repaired, and certified for reuse.' },
+      { title: 'Refrigerated (Reefer) Containers', description: 'Temperature-controlled containers for food, pharmaceuticals, and cold-chain logistics.' },
+      { title: 'Specialized Containers', description: 'Open-top, flat-rack, tank containers, and custom cargo units.' },
+      { title: 'Container Modifications', description: 'Office containers, storage units, accommodation modules, and custom conversions.' },
+      { title: 'Container Accessories & Parts', description: 'CSC plates, locking systems, generator sets, and fittings.' },
+      { title: 'Container Leasing & Logistics', description: 'Leasing, positioning, transportation, and fleet management services.' }
+    ],
     capabilities: [
       '20ft and 40ft standard containers',
       '40ft high-cube containers',
@@ -207,10 +256,17 @@ export const metalDomains: MetalDomainDetail[] = [
   {
     id: 'wires',
     iconName: 'Cable',
-    title: 'Metal Wires Trading',
+    title: 'Metal Wires, Rods & Cables Trading',
     summary: 'Conductive and structural wire products including copper, aluminium conductors, steel wire, specialty cables, and mesh.',
     path: '/metal/wires',
-    description: 'Comprehensive metal wire and cable trading covering electrical conductors, structural wire products, and specialty applications. We supply copper wire, aluminum conductors, galvanized steel wire, and engineered cable products meeting international electrical and mechanical standards.',
+    description: 'This domain supports construction, energy, telecom, and industrial manufacturing.',
+    subdomains: [
+      { title: 'Copper Conductors & Cables', description: 'Electrical wires, power cables, busbars, and grounding systems.' },
+      { title: 'Aluminium Conductors', description: 'Overhead conductors, power cables, and industrial wiring.' },
+      { title: 'Steel Wires & Wire Rods', description: 'High-carbon, galvanized, stainless, and specialty wires for industrial and structural use.' },
+      { title: 'Specialty & Industrial Cables', description: 'Multi-core, control, telecom, automotive, and aerospace cables.' },
+      { title: 'Wire Mesh & Fencing Products', description: 'Reinforcement mesh, fencing wire, security barriers, and industrial mesh panels.' }
+    ],
     capabilities: [
       'Copper wire and rods',
       'Aluminum conductors and cables',
@@ -249,7 +305,15 @@ export const metalDomains: MetalDomainDetail[] = [
     title: 'Metal Cans & Industrial Containers Trading',
     summary: 'Industrial packaging solutions including steel drums, tinplate cans, storage tanks, and custom metal packaging.',
     path: '/metal/packaging',
-    description: 'We specialize in industrial metal packaging solutions for chemical, automotive, and consumer goods industries. Our portfolio includes standard steel drums, tinplate cans, intermediate bulk containers (IBCs), and custom-engineered metal packaging tailored to specific containment requirements.',
+    description: 'Green Hills Metals supplies metal packaging and storage solutions for industrial and commercial use.',
+    subdomains: [
+      { title: 'Steel Drums & Barrels', description: 'Open-head and tight-head drums for chemicals, petroleum, lubricants, and hazardous materials.' },
+      { title: 'Tinplate Cans & Pails', description: 'Food-grade and industrial tin-coated steel cans for food, beverages, paints, and coatings.' },
+      { title: 'Industrial Storage Tanks & IBCs', description: 'Large tanks and intermediate bulk containers for oils, chemicals, and industrial fluids.' },
+      { title: 'Gas Cylinders & Pressure Containers', description: 'Specialized containers for industrial gases and pressurized materials.' },
+      { title: 'Custom Metal Packaging Solutions', description: 'OEM containers, crates, and application-specific metal packaging.' },
+      { title: 'Packaging Inspection & Recycling Services', description: 'Reconditioning, quality checks, reuse, and recycling programs supporting sustainability.' }
+    ],
     capabilities: [
       '55-gallon steel drums',
       '30-liter and 10-liter containers',
