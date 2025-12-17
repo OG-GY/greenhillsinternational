@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { servicesData } from '@/app/lib/servicedata';
+import { metalDomains } from '@/app/lib/metalservicedata';
 
 const Footer = () => {
   const currentYear = 2025;
@@ -7,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary/95 text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-7 gap-8 mb-8">
+          <div className="lg:col-span-2">
             <h3 className="text-2xl font-serif font-bold mb-4">
               Green Hills 
               <span className="block text-sm font-light tracking-widest mt-1">International</span>
@@ -48,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-span-1">
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -57,13 +59,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/construction#services" className="text-primary-foreground/70 hover:text-accent transition-colors">
-                  Construction Services
+                <Link href="/construction" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Construction
                 </Link>
               </li>
               <li>
-                <Link href="/metal#services" className="text-primary-foreground/70 hover:text-accent transition-colors">
-                  Metal Services
+                <Link href="/metal" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Metal Trading
                 </Link>
               </li>
               <li>
@@ -71,16 +73,43 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/bookappointment" className="text-primary-foreground/70 hover:text-accent transition-colors">
+                  Book Appointment
+                </Link>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li className="text-primary-foreground/70">Civil Construction</li>
-              <li className="text-primary-foreground/70">MEP Services</li>
-              <li className="text-primary-foreground/70">Infrastructure</li>
-              <li className="text-primary-foreground/70">Facades</li>
+          <div className="lg:col-span-2">
+            <h4 className="font-semibold text-lg mb-4">Construction Services</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+              {servicesData.map((service) => (
+                <li key={service.slug}>
+                  <Link 
+                    href={`/construction/services/${service.slug}`}
+                    className="text-primary-foreground/70 hover:text-accent transition-colors text-sm block"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <h4 className="font-semibold text-lg mb-4">Metal Trading</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+              {metalDomains.map((domain) => (
+                <li key={domain.id}>
+                  <Link 
+                    href={domain.path}
+                    className="text-primary-foreground/70 hover:text-accent transition-colors text-sm block"
+                  >
+                    {domain.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
