@@ -1,15 +1,83 @@
 import { Metadata } from 'next';
-import { Button } from '../components/ui/button';
-import Image from 'next/image';
-import Link from 'next/link';
 import heroMetal from '../assets/metals/hero-metal.jpg';
+import structuralSteel from '../assets/metals/structural-steel.jpg';
+import metalFabrication from '../assets/metals/metal-fabrication.jpg';
+import metalExcellence from '../assets/metal-excellence.jpg';
 import { metalDomains } from '../lib/metalservicedata';
 import ServicesSection from '../components/ServicesSection';
 import SustainabilitySection from '../components/SustainabilitySection';
-import MetalAboutSection from '../components/MetalAboutSection';
+import AboutSection from '../components/AboutSection';
+import HeroCarousel from '../components/HeroCarousel';
+import ClientsSection from '../components/ClientsSection';
+import TestimonialsSection from '../components/TestimonialSection';
+import BookAppointment from '../components/BookAppointment';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import ServicePageSchema from '../components/ServicePageSchema';
 import FAQSchema, { metalFAQs } from '../components/FAQSchema';
+
+import user1 from '../assets/testimonials/user-1.jpg';
+import user2 from '../assets/testimonials/user-2.jpg';
+import user3 from '../assets/testimonials/user-3.jpg';
+import user4 from '../assets/testimonials/user-4.jpg';
+import user5 from '../assets/testimonials/user-5.jpg';
+import user6 from '../assets/testimonials/user-6.jpg';
+
+const metalTestimonials = [
+  {
+    name: 'James Wilson',
+    role: 'Operations Director, Heavy Industries Corp',
+    message: 'Green Hills Metals has been our go-to supplier for structural steel. Their consistency in quality and delivery schedules is unmatched in the region.',
+    image: user3,
+  },
+  {
+    name: 'Elena Rodriguez',
+    role: 'Procurement Manager, BuildRight Construction',
+    message: 'We rely on Green Hills for all our reinforcement steel needs. Their competitive pricing and professional service make them a valuable partner.',
+    image: user2,
+  },
+  {
+    name: 'David Chen',
+    role: 'Supply Chain Head, TechComponents Mfg',
+    message: 'Sourcing high-grade copper and aluminum was a challenge until we partnered with Green Hills. They understand the specific requirements of the electronics industry.',
+    image: user1,
+  },
+  {
+    name: 'Sarah Al-Maktoum',
+    role: 'Sustainability Officer, EcoRecycle UAE',
+    message: 'Their commitment to responsible scrap trading aligns perfectly with our sustainability goals. A transparent and ethical partner in the recycling sector.',
+    image: user4,
+  },
+  {
+    name: 'Robert Thompson',
+    role: 'Plant Manager, AutoParts Manufacturing',
+    message: 'The quality of ferrous metals we receive is always top-notch. Green Hills International has significantly improved our raw material supply chain efficiency.',
+    image: user5,
+  },
+  {
+    name: 'Aisha Khan',
+    role: 'Director, MetalWorks Studio',
+    message: 'For custom architectural metal needs, Green Hills provides excellent material options. Their team is knowledgeable and always ready to assist.',
+    image: user6,
+  },
+];
+
+const metalSlides = [
+  {
+    image: heroMetal,
+    title: 'Global Trade Solutions',
+    subtitle: 'Metals & Products Trading',
+  },
+  {
+    image: structuralSteel,
+    title: 'Quality Steel Products',
+    subtitle: 'For Industrial Applications',
+  },
+  {
+    image: metalFabrication,
+    title: 'Sustainable Scrap Trading',
+    subtitle: 'Recycling for the Future',
+  },
+];
 
 export const metadata: Metadata = {
   title: 'Metal Trading Dubai & UAE | Best Metal Services | Green Hills International',
@@ -94,39 +162,22 @@ const Metal = () => {
       <FAQSchema faqs={metalFAQs} />
       
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src={heroMetal}
-            alt="Metal trading and industrial materials"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/90 to-deep-navy/70"></div>
-          
-          <div className="relative z-10 container mx-auto px-4 text-center text-white">
-            <span className="text-sm font-semibold tracking-widest uppercase">
-              Global Trade Solutions
-            </span>
-            <h1 className="text-5xl md:text-7xl font-serif font-light mt-4 mb-6">
-              Metals & Products Trading
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Forging global trade with quality and integrity. Your trusted partner for metals, industrial materials, and comprehensive scrap trading solutions.
-            </p>
-          </div>
-        </section>
+        <HeroCarousel slides={metalSlides} />
 
-        {/* About Section */}
-        <MetalAboutSection
-          eyebrow="About Green Hills Metals"
+        <AboutSection 
           title="International Trading Excellence"
           paragraphs={[
-            "Green Hills Metals & Its Products Trading L.L.C. is a UAE-headquartered international trading company specializing in metals, industrial materials, and comprehensive scrap trading. With a strong operational presence in Dubai – a global commodities hub – we partner with leading manufacturers, smelters, recyclers, and suppliers to deliver high-quality metals and industrial inputs worldwide.",
-            "Our portfolio includes ferrous and non-ferrous metals, steel products, metal ores, cargo containers, industrial packaging, and a complete range of scrap and recycled materials. By combining transparent sourcing, technical expertise, and sustainable practices, we ensure reliable supply chains and long-term value for clients across global markets."
+            <p key="1">Green Hills Metals & Its Products Trading L.L.C. is a UAE-headquartered international trading company specializing in metals, industrial materials, and comprehensive scrap trading. With a strong operational presence in Dubai – a global commodities hub – we partner with leading manufacturers, smelters, recyclers, and suppliers to deliver high-quality metals and industrial inputs worldwide.</p>,
+            <p key="2">Our portfolio includes ferrous and non-ferrous metals, steel products, metal ores, cargo containers, industrial packaging, and a complete range of scrap and recycled materials. By combining transparent sourcing, technical expertise, and sustainable practices, we ensure reliable supply chains and long-term value for clients across global markets.</p>
           ]}
-          highlight="Dubai"
+          highlightTitle="Green Hills Metals"
+          highlightText={
+            <p>
+              At <span className="font-semibold text-foreground">Green Hills Metals & Its Products Trading L.L.C.</span>, we are your trusted partner for <strong>global metal trading</strong>. From ferrous and non-ferrous metals to industrial scrap, we connect markets with integrity and efficiency.
+            </p>
+          }
+          image={metalExcellence}
+          stats={{ value: "Global", label: "Trade Solutions" }}
         />
 
         {/* Trading Domains (rendered via ServicesSection) */}
@@ -162,27 +213,10 @@ const Metal = () => {
           ]}
         />
 
-        {/* Contact CTA Section */}
-        <section className="py-24 bg-gradient-to-br from-deep-navy to-deep-navy/90">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-serif font-light mb-6 text-warm-cream">
-              Ready to Partner With Us?
-            </h2>
-            <p className="text-warm-cream/80 text-lg mb-8 max-w-2xl mx-auto">
-              Contact our trading team to discuss your metal and industrial material requirements.
-            </p>
-            <Button 
-              asChild 
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-warm-cream border-luxury-gold hover:bg-luxury-gold hover:text-deep-navy"
-            >
-              <Link href="/contact">
-                Get In Touch
-              </Link>
-            </Button>
-          </div>
-        </section>
+        <ClientsSection />
+        <TestimonialsSection testimonials={metalTestimonials} />
+
+        <BookAppointment/>
       </main>
     </div>
   );

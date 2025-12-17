@@ -2,29 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import hero1 from '../assets/hero-1.jpg';
-import hero2 from '../assets/hero-2.jpg';
-import hero3 from '../assets/hero-3.jpg';
+import { StaticImageData } from 'next/image';
 
-const slides = [
-  {
-    image: hero1,
-    title: 'A Legacy',
-    subtitle: 'Built on Quality.',
-  },
-  {
-    image: hero2,
-    title: 'Delivering Functional',
-    subtitle: 'and World-Class Projects.',
-  },
-  {
-    image: hero3,
-    title: 'Ground-Breaking Innovation',
-    subtitle: 'with Robust Engineering.',
-  },
-];
+export interface Slide {
+  image: StaticImageData | string;
+  title: string;
+  subtitle: string;
+}
 
-const HeroCarousel = () => {
+interface HeroCarouselProps {
+  slides: Slide[];
+}
+
+const HeroCarousel = ({ slides }: HeroCarouselProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -60,7 +50,7 @@ const HeroCarousel = () => {
           </div>
           <div
             className="absolute inset-0  bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image.src})` }}
+            style={{ backgroundImage: `url(${typeof slide.image === 'string' ? slide.image : slide.image.src})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
           

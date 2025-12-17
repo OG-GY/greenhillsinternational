@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import LandingSection from "./components/LandingSection";
+import ClientsSection from "./components/ClientsSection";
 import FAQSchema, { homeFAQs } from "./components/FAQSchema";
 
 export const metadata: Metadata = {
@@ -62,9 +63,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <FAQSchema faqs={homeFAQs} />
       <LandingSection/>
+      <div className="w-full">
+        <ClientsSection />
+      </div>
     </div>
   );
 }
