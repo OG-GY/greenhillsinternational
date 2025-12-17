@@ -6,11 +6,6 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import { usePathname } from 'next/navigation';
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
 interface DynamicNavigationProps {
   /**
    * If true (default) the navbar will switch from transparent -> blue when the page is scrolled.

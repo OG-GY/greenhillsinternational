@@ -22,7 +22,7 @@ const HeroCarousel = ({ slides }: HeroCarouselProps) => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
