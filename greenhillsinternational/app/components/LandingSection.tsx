@@ -1,6 +1,6 @@
 import { Building2, Hammer, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
-import landingHero from '@/app/assets/landing-hero.jpg';
+import landingHero from '@/app/assets/landing-hero.png';
 import constructionExcellence from '@/app/assets/construction-excellence.jpg';
 import metalExcellence from '@/app/assets/metal-excellence.jpg';
 import Link from 'next/link';
@@ -28,7 +28,7 @@ const LandingSection = () => {
         />
 
         {/* Overlay between background and content */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/30 via-black/25 to-black/60 pointer-events-none" />
+        <div className="absolute inset-0 z-10 bg-black/60 pointer-events-none" />
 
         <div className="relative h-full flex items-center justify-center z-20">
           <div className="container mx-auto px-4 text-center">
