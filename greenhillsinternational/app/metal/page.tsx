@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import DynamicFooter from '../components/DynamicFooter';
 import { Button } from '../components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -94,7 +93,6 @@ const Metal = () => {
         ]}
       />
       <FAQSchema faqs={metalFAQs} />
-      <Navigation changeOnScroll={false} />
       
       <main className="flex-1">
         {/* Hero Section */}
@@ -188,7 +186,7 @@ const Metal = () => {
         </section>
       </main>
 
-      <Footer />
+      <DynamicFooter />
     </div>
   );
 };

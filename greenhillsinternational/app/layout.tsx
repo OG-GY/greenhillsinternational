@@ -1,7 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
-import Navigation from "./components/Navigation"
+import DynamicNavigation from "./components/DynamicNavigation"
+import DynamicFooter from "./components/DynamicFooter"
 import SEOSchema from "./components/SEOSchema"
 import { Suspense } from "react"
 
@@ -164,9 +165,10 @@ export default function RootLayout({
       <body>
         <Suspense fallback={<div>Loading...</div>}>
           <header>
-            <Navigation/>
+            <DynamicNavigation/>
           </header>
           <main className="min-h-dvh">{children}</main>
+          <DynamicFooter />
         </Suspense>
       </body>
     </html>

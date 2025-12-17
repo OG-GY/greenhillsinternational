@@ -1,7 +1,5 @@
 import { Building2, Hammer, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
-import Navigation from '@/app/components/Navigation';
-import Footer from '@/app/components/Footer';
 import landingHero from '@/app/assets/landing-hero.jpg';
 import constructionExcellence from '@/app/assets/construction-excellence.jpg';
 import metalExcellence from '@/app/assets/metal-excellence.jpg';
@@ -11,7 +9,6 @@ import Image from 'next/image';
 const LandingSection = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
@@ -197,8 +194,6 @@ const LandingSection = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
