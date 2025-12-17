@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export const ContactInfo = () => {
   return (
-    <div className="bg-card p-8 rounded-sm shadow-lg">
+    <div className="bg-card text-card-foreground p-8 rounded-sm shadow-lg">
       <h3 className="text-2xl font-serif mb-6">Contact Info</h3>
       
       <div className="space-y-6">
@@ -13,8 +13,9 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-lg">Call Us</h4>
-            <p className="text-muted-foreground">+971 55 334 4874</p>
             <p className="text-muted-foreground">+971 50 496 7289</p>
+            <p className="text-muted-foreground">+971 52 952 7666 </p>
+            <p className="text-muted-foreground">+971 55 966 9001</p>
           </div>
         </div>
 
@@ -38,8 +39,8 @@ export const ContactInfo = () => {
           <div>
             <h4 className="font-semibold mb-2 text-lg">Our Location</h4>
             <p className="text-muted-foreground">
-              123 Construction Avenue<br />
-              Building District, City 12345
+              Port saeed area DUBAI UAE<br />
+              Arab bank building 4th floor office No 24
             </p>
           </div>
         </div>
@@ -51,8 +52,8 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-lg">Working Hours</h4>
-            <p className="text-muted-foreground">Mon-Sun: 10AM-5PM</p>
-            <p className="text-muted-foreground">Friday off</p>
+            <p className="text-muted-foreground">Working 24/7</p>
+            <p className="text-muted-foreground"></p>
           </div>
         </div>
       </div>

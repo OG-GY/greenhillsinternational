@@ -72,10 +72,7 @@ const ContactUs = () => {
       {/* Contact Form and Info Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-            {/* Contact Form */}
-            <ContactForm />
-
+          <div className="max-w-4xl mx-auto">
             {/* Contact Info */}
             <ContactInfo />
           </div>
