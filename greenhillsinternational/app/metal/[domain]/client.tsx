@@ -53,7 +53,7 @@ export default function MetalServiceDetailClient({ domain }: Props) {
           key={index}
           title={subdomain.title}
           description={subdomain.description}
-          imageSrc={images[index % images.length]}
+          imageSrc={subdomain.image || images[index % images.length]}
           imageAlt={subdomain.title}
           reverse={index % 2 === 0}
         />
