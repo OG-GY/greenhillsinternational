@@ -66,10 +66,18 @@ const DynamicNavigation = ({ changeOnScroll = true }: DynamicNavigationProps) =>
 
   const config = getNavConfig();
 
-  // Only attach the scroll listener when changeOnScroll is true. If changeOnScroll is false
+  // Service detail pages should always have a solid navbar background for clarity.
+  // Detect construction service pages and metal domain pages and disable transparency there.
+  const isServiceDetail =
+    pathname.startsWith('/construction/services/') || pathname.startsWith('/metal/');
+
+  // Effective behavior: allow scroll-based background change only when not on service detail pages.
+  const effectiveChangeOnScroll = changeOnScroll && !isServiceDetail;
+
+  // Only attach the scroll listener when effectiveChangeOnScroll is true. If false,
   // we want the navbar to always show the blue background and there's no need for a listener.
   useEffect(() => {
-    if (!changeOnScroll) return;
+    if (!effectiveChangeOnScroll) return;
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -80,11 +88,11 @@ const DynamicNavigation = ({ changeOnScroll = true }: DynamicNavigationProps) =>
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [changeOnScroll]);
+  }, [effectiveChangeOnScroll]);
 
   // showBlue should be true when the navbar must display the solid blue background.
-  // If changeOnScroll is false we always show blue; otherwise only when scrolled.
-  const showBlue = !changeOnScroll || isScrolled;
+  // If effectiveChangeOnScroll is false we always show blue; otherwise only when scrolled.
+  const showBlue = !effectiveChangeOnScroll || isScrolled;
 
   return (
     <nav
