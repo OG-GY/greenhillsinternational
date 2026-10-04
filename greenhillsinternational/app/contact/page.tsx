@@ -4,7 +4,7 @@ import { ContactInfo } from '@/app/components/ContactInfo';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Green Hills International',
-  description: 'Connect with Green Hills International today. Get quotes & support for construction & metal trading. Call +971 55 334 4874 or email us now.',
+  description: 'Connect with Green Hills International today. Get quotes & support for construction & metal trading. Call +971 4 575 2216 or email us now.',
   keywords: ['contact', 'inquiry', 'quote', 'construction services', 'metal trading', 'support'],
   openGraph: {
     type: 'website',

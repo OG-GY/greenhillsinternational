@@ -93,7 +93,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="text-primary-foreground/70">+1 (555) 123-4567</p>
+                  <p className="text-primary-foreground/70">+971 4 575 2216</p>
                 </div>
               </div>
 
@@ -114,8 +114,8 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Office</h4>
                   <p className="text-primary-foreground/70">
-                    123 Construction Avenue<br />
-                    Building District, City 12345
+                    Al Bannai Building, Office No. 111, 1st Floor<br />
+                    Al Nahda 1, Dubai, UAE
                   </p>
                 </div>
               </div>

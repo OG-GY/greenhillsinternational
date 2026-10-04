@@ -71,14 +71,21 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+971 50 496 7289",
+      telephone: "+971 4 575 2216",
       contactType: "customer service",
       areaServed: "AE",
       availableLanguage: ["English", "Arabic", "Hindi"]
     },
     {
       "@type": "ContactPoint",
-      telephone: "+971 55 334 4874",
+      telephone: "+971 55 966 9001",
+      contactType: "sales",
+      areaServed: "AE",
+      availableLanguage: ["English", "Arabic"]
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "+971 58 388 3991",
       contactType: "sales",
       areaServed: "AE",
       availableLanguage: ["English", "Arabic"]
@@ -86,7 +93,7 @@ const organizationSchema = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Business Bay",
+    streetAddress: "Al Bannai Building, Office No. 111, 1st Floor, Al Nahda 1",
     addressLocality: "Dubai",
     addressRegion: "Dubai",
     postalCode: "00000",
@@ -104,7 +111,7 @@ const localBusinessSchema = {
   image: "https://greenhillsinternational.com/og/og-default.png",
   logo: "https://greenhillsinternational.com/logo.png",
   url: "https://greenhillsinternational.com",
-  telephone: "+971 55 334 4874",
+  telephone: "+971 4 575 2216",
   email: "info@greenhillsinternational.com",
   description: "Green Hills International - Premier construction company and metal trading specialists in Dubai, UAE. Offering luxury residential, commercial construction, MEP services, and comprehensive metal supply chain solutions.",
   priceRange: "$$$",
@@ -112,7 +119,7 @@ const localBusinessSchema = {
   paymentAccepted: "Cash, Credit Card, Bank Transfer",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Business Bay",
+    streetAddress: "Al Bannai Building, Office No. 111, 1st Floor, Al Nahda 1",
     addressLocality: "Dubai",
     addressRegion: "Dubai",
     postalCode: "00000",
@@ -120,22 +127,28 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 25.1857,
-    longitude: 55.2658
+    latitude: 25.2788,
+    longitude: 55.3565
   },
   hasMap: "https://maps.google.com/?q=Green+Hills+International+Dubai",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "08:00",
-      closes: "18:00"
+      opens: "09:00",
+      closes: "17:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: "Friday",
-      opens: "08:00",
+      opens: "09:00",
       closes: "12:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Friday",
+      opens: "14:00",
+      closes: "17:00"
     },
     {
       "@type": "OpeningHoursSpecification",
@@ -148,8 +161,8 @@ const localBusinessSchema = {
     "@type": "GeoCircle",
     geoMidpoint: {
       "@type": "GeoCoordinates",
-      latitude: 25.1857,
-      longitude: 55.2658
+      latitude: 25.2788,
+      longitude: 55.3565
     },
     geoRadius: "100000"
   },
@@ -197,7 +210,7 @@ const corporateContactSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+971-4-XXX-XXXX",
+      telephone: "+971-4-575-2216",
       contactType: "customer support",
       areaServed: ["AE", "SA", "OM", "QA", "KW", "BH"],
       availableLanguage: ["English", "Arabic"]

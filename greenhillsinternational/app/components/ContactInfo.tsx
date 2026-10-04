@@ -13,9 +13,9 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-lg">Call Us</h4>
-            <p className="text-muted-foreground">+971 50 496 7289</p>
-            <p className="text-muted-foreground">+971 52 952 7666 </p>
+            <p className="text-muted-foreground">+971 4 575 2216</p>
             <p className="text-muted-foreground">+971 55 966 9001</p>
+            <p className="text-muted-foreground">+971 58 388 3991</p>
           </div>
         </div>
 
@@ -39,10 +39,24 @@ export const ContactInfo = () => {
           <div>
             <h4 className="font-semibold mb-2 text-lg">Our Location</h4>
             <p className="text-muted-foreground">
-              Port saeed area DUBAI UAE<br />
-              Arab bank building 4th floor office No 24
+              Al Bannai Building, Office No. 111, 1st Floor<br />
+              Al Nahda 1, Dubai, UAE
             </p>
           </div>
+        </div>
+
+        {/* Map */}
+        <div className="w-full aspect-[16/9] rounded-sm overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps?q=25.290653,55.367931&z=17&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Green Hills International Location"
+          />
         </div>
 
         {/* Working Hours */}
@@ -52,8 +66,10 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-lg">Working Hours</h4>
-            <p className="text-muted-foreground">Working 24/7</p>
-            <p className="text-muted-foreground"></p>
+            <p className="text-muted-foreground">Monday - Thursday: 9:00 AM - 5:00 PM</p>
+            <p className="text-muted-foreground">Friday: 9:00 AM - 12:00 PM &amp; 2:00 PM - 5:00 PM</p>
+            <p className="text-muted-foreground">Saturday: 9:00 AM - 2:00 PM</p>
+            <p className="text-muted-foreground">Sunday: Closed</p>
           </div>
         </div>
       </div>
